@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3.16. MySQL ALTER命令</title>
+    <link type="text/css" rel="stylesheet" href="../css/common.css">
+    <link type="text/css" rel="stylesheet" href="../css/public.css">
+    <style>
+    </style>
+</head>
+<body>
+<div id="page-node-content">
+    <div class="content-tit clearfix">
+       <a href="简介.html" target="mainFrame" >首页</a>
+       &gt;
+       <a href="html4.html" target="mainFrame" >3.16. MySQL ALTER命令</a>
+    </div>
+    <div class="content-content clearfix">
+        <div class="living-example fl">
+                <h2>3.16. MySQL 索引</h2>
+                <p class="tip">MySQL索引的建立对于MySQL的高效运行是很重要的，索引可以大大提高MySQL的检索速度。 打个比方，如果合理的设计且使用索引的MySQL是一辆兰博基尼的话，那么没有设计和使用索引的MySQL就是一个人力三轮车。 索引分单列索引和组合索引。单列索引，即一个索引只包含单个列，一个表可以有多个单列索引，但这不是组合索引。组合索引，即一个索引包含多个列。 创建索引时，你需要确保该索引是应用在 SQL 查询语句的条件(一般作为 WHERE 子句的条件)。 实际上，索引也是一张表，该表保存了主键与索引字段，并指向实体表的记录。 上面都在说使用索引的好处，但过多的使用索引将会造成滥用。因此索引也会有它的缺点：虽然索引大大提高了查询速度，同时却会降低更新表的速度，如对表进行INSERT、UPDATE和DELETE。因为更新表时，MySQL不仅要保存数据，还要保存一下索引文件。 建立索引会占用磁盘空间的索引文件。</p>
+                <h3>3.16.1.普通索引</h3>
+                <h3>3.16.1.1.创建索引</h3>
+                <p class="tip">这是最基本的索引，它没有任何限制。它有以下几种创建方式：</p>
+                <pre>
+                 CREATE INDEX indexName ON mytable(username(length));
+                </pre>
+                 
+                 <p class="tip">如果是CHAR，VARCHAR类型，length可以小于字段实际长度；如果是BLOB和TEXT类型，必须指定 length。</p>
+                 <h3>3.16.1.2.修改表结构(添加索引)</h3>
+                 <pre>
+                  ALTER table tableName ADD INDEX indexName(columnName)
+                </pre>
+                
+                <h3>3.16.1.3.创建表的时候直接指定</h3>
+                 <pre>
+                  CREATE TABLE mytable(<br />
+
+					ID INT NOT NULL,<br />
+
+					username VARCHAR(16) NOT NULL,<br />
+
+					INDEX [indexName] (username(length))<br />
+
+					);
+                </pre>
+                	<h3>3.16.1.4.删除索引的语法</h3>
+                 <pre>
+                  DROP INDEX [indexName] ON mytable;	
+                </pre>
+                <h3>3.16.2.唯一索引</h3>
+                 <p class="tip">它与前面的普通索引类似，不同的就是：索引列的值必须唯一，但允许有空值。如果是组合索引，则列值的组合必须唯一。它有以下几种创建方式：</p>
+                 <h3>3.16.2.1.创建索引</h3>
+                 <pre>
+                  CREATE UNIQUE INDEX indexName ON mytable(username(length))	
+                </pre>
+                <h3>3.16.2.2.修改表结构</h3>
+                <pre>
+                  ALTER table mytable ADD UNIQUE [indexName] (username(length))
+                </pre>
+                <h3>3.16.2.3.创建表的时候直接指定</h3>
+                <pre>
+                  CREATE TABLE mytable(<br />
+
+   					ID INT NOT NULL,<br />
+
+					username VARCHAR(16) NOT NULL,<br />
+
+					UNIQUE [indexName] (username(length))<br />
+
+					);
+                </pre>
+                <h3>3.16.3.使用ALTER 命令添加和删除索引</h3>
+                 <p class="tip">有四种方式来添加数据表的索引：</p><br />
+                 <p class="tip">ALTER TABLE tbl_name ADD PRIMARY KEY (column_list): 该语句添加一个主键，这意味着索引值必须是唯一的，且不能为NULL。</p>
+                 <p class="tip">ALTER TABLE tbl_name ADD UNIQUE index_name (column_list): 这条语句创建索引的值必须是唯一的（除了NULL外，NULL可能会出现多次）。</p>
+                 <p class="tip">ALTER TABLE tbl_name ADD INDEX index_name (column_list): 添加普通索引，索引值可出现多次。</p>
+                 <p class="tip">ALTER TABLE tbl_name ADD FULLTEXT index_name (column_list):该语句指定了索引为 FULLTEXT ，用于全文索引。</p><br />
+                 
+                 <p class="tip">以下实例为在表中添加索引。</p>
+                  <pre>
+                  mysql> ALTER TABLE testalter_tbl ADD INDEX (c);
+                </pre>
+                 <p class="tip">你还可以在 ALTER 命令中使用 DROP 子句来删除索引。尝试以下实例删除索引:</p>
+                 <pre>
+                  mysql> ALTER TABLE testalter_tbl DROP INDEX c;
+                </pre>
+                <h3>3.16.4.使用 ALTER 命令添加和删除主键</h3>
+                <p class="tip">主键只能作用于一个列上，添加主键索引时，你需要确保该主键默认不为空（NOT NULL）。实例如下：</p>
+                
+                <pre>
+                 mysql> ALTER TABLE testalter_tbl MODIFY i INT NOT NULL;<br />
+  				 mysql> ALTER TABLE testalter_tbl ADD PRIMARY KEY (i);
+                </pre>
+                <p class="tip">你也可以使用 ALTER 命令删除主键：</p>
+                  <pre>
+                  mysql> ALTER TABLE testalter_tbl DROP PRIMARY KEY;
+                </pre>
+                <p class="tip">删除主键时只需指定PRIMARY KEY，但在删除索引时，你必须知道索引名。</p>
+                <h3>3.16.5.显示索引信息</h3>
+                <p>你可以使用 SHOW INDEX 命令来列出表中的相关的索引信息。可以通过添加 G 来格式化输出信息。</p>
+                <p>尝试以下实例:</p>
+                 <pre>
+                 mysql> SHOW INDEX FROM table_name; \G
+                  </pre>
+              	<br />
+              
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../js/jquery.min.js" ></script>
+<script type="text/javascript" src="../js/nicescrool.js"></script>
+<script type="text/javascript">
+    $(function(){
+
+        //美化滚动条
+        $(".result,.living-example").eq(0).niceScroll({
+            cursorcolor: "#bbb", // 改变滚动条颜色，使用16进制颜色值
+            cursorwidth: "4px", // 滚动条的宽度，单位：便素
+            cursorborder: "0px solid #e0e0e0", // CSS方式定义滚动条边框
+            cursorborderradius: "3px", // 滚动条圆角（像素）
+            autohidemode: 'false', // 隐藏滚动条的方式, 可用的值: true | // 无滚动时隐藏 "cursor" | // 隐藏 false | // 不隐藏, "leave" | // 仅在指针离开内容时隐藏"hidden" | // 一直隐藏  "scroll", // 仅在滚动时显示
+            background: "#e0e0e0", // 轨道的背景颜色
+        });
+    });
+
+</script>
+</html>

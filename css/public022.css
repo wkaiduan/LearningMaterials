@@ -1,0 +1,249 @@
+@charset "utf-8";
+a{ color: #333333;}
+a.message{color: #e6253b;}
+a:hover{ color: #e6253b;}
+/*---------left公共样式开始-------------*/
+.conter-box{ background: #f4f4f5;}
+/*头部 开始*/
+.cme-header{ width: 100%; height: auto;}
+.cme-header .topbar{width: 1200px; margin: 0 auto; height: 35px;}
+.cme-header .topbar .text{ line-height: 35px;font-size: 14px; color: #333333;}
+.cme-header .topbar .nav-box ul{ float: right;}
+.cme-header .topbar .nav-box ul li{ float: left;line-height: 35px; padding: 0 5px; font-size: 14px; color:#999999;position: relative;}
+.cme-header .topbar .nav-box ul li .news{ position: relative; top:2px; padding-right:5px; }
+.cme-header .topbar .nav-box ul li span{padding: 0 5px; height: 16px; display: inline-block; background: #e6253b; border-radius: 10px; font-size: 12px; position: relative; text-align: center; line-height:16px; color: #ffffff;}
+.cme-header .topbar .nav-box ul li .phone{ position: relative; top:4px; padding-right:5px; }
+.cme-header .topbar .nav-box ul li .hide-box{width: 83px; height: 83px; display: none; position: absolute;left: -14px; z-index: 111; border: 1px solid #ddd;}
+.cme-header .topbar .nav-box ul li .hide-box img{ width: 83px; height: 83px;}
+.cme-header .topbar .nav-box ul .program:hover .hide-box{ display: block;}
+
+.cme-header .topbar .nav-box ul .number a{ color: #e6253b; font-weight: 600;position: relative;top: 1px;}
+.cme-header .topbar .nav-box ul .sign a{ color: #e6253b;}
+.cme-header .topbar .nav-box ul .register a{ color: #e6253b;}
+.cme-header .header{ width: 100%; height: 80px; background: #0d81e0;}
+.cme-header .header .logo-box{ width: 1200px; margin: 0 auto;}
+.cme-header .header .logo-box .pic img{ margin-top: 16px;}
+.cme-header .header .logo-box .name{ font-size: 20px; color: #ffffff; font-weight: 600; line-height: 80px; padding-left: 12px;}
+/*头部 结束*/
+
+.cme-main{ width: 1200px; margin: 20px auto;}
+/*左侧 开始*/
+.cme-main .left-box{ width:150px; height: auto; background: #ffffff; padding:0 20px; }
+.cme-main .left-box .list-box{}
+.cme-main .left-box .list-box ul{}
+.cme-main .left-box .list-box ul li{ border-bottom: 1px dashed #ddd; }
+.cme-main .left-box .list-box ul li .first a{ font-size: 14px; line-height: 54px; font-weight: 600; }
+.cme-main .left-box .list-box ul li .second{ margin-bottom: 10px;}
+.cme-main .left-box .list-box ul li .second a{ font-size: 14px; color: #666; line-height: 30px; }
+.cme-main .left-box .list-box ul li:last-child{ border-bottom: none;}
+.cme-main .left-box .list-box ul li .curr a{color: #0d81e0;}
+.cme-main .left-box .list-box ul li a:hover{ color: #0d81e0;}
+/*左侧 结束*/
+
+/*底部 开始*/
+.cme-footer{ width: 100%; background: #333333;}
+.cme-footer .top-box{ width: 1200px; margin:20px auto; }
+.cme-footer .top-box .information{ width: 600px; margin-top:30px; border-right: 1px solid #717171;padding: 10px 0;}
+.cme-footer .top-box .information ul{ margin-left: 50px;}
+.cme-footer .top-box .information ul li{ float: left; padding-right: 38px;}
+.cme-footer .top-box .information ul li .pic{}
+.cme-footer .top-box .information ul li .pic img{width: 44px; height: 44px;}
+.cme-footer .top-box .information ul li .photo{ margin-left: 10px;}
+.cme-footer .top-box .information ul li .photo .name{ font-size: 14px; color: #b7b7b7;}
+.cme-footer .top-box .information ul li .photo .tel{ font-size: 22px; color: #b7b7b7;}
+.cme-footer .top-box .information .text{ font-size: 12px; color: #b7b7b7; padding:30px 0 0  50px;}
+.cme-footer .top-box .guidance{  margin-top:40px; padding-left: 60px;}
+.cme-footer .top-box .guidance .name{ font-size: 14px; color: #b7b7b7;padding-bottom: 20px; }
+.cme-footer .top-box .guidance .text{ line-height: 32px;}
+.cme-footer .top-box .guidance .text span{ padding-right: 38px;}
+.cme-footer .top-box .guidance .text a{ font-size: 12px; color: #b7b7b7;}
+.cme-footer .top-box .guidance .text a:hover{ color: #e0e0e0;}
+.cme-footer .top-box .code{ margin-top:30px; }
+.cme-footer .top-box .code .open{ text-align: center; color: #b7b7b7; padding-top: 8px;}
+.cme-footer .bottom-box{ width: 100%; line-height:48px; background: #1e1d23; text-align: center; color: #b7b7b7; }
+/*底部 结束*/
+/*---------left公共样式结束-------------*/
+
+
+/*---------right公共样式开始---------*/
+.cme-main .right-box{width: 958px; padding: 20px; background: #fff; margin-left: 12px;}
+/*标题  开始*/
+.right-tit{font-size: 20px; font-weight: bold; color: #0d81e0; margin-bottom: 20px;}
+/*标题  结束*/
+
+/*搜索区域  开始*/
+.btnbox{margin-top: 20px;}
+.search-box{}
+.search-box .rows{margin-left: 20px;}
+.search-box .rows:first-of-type{margin-left: 0px;}
+.search-box .rows .lable{height: 34px;line-height: 34px; font-size: 14px; color: #666;}
+.search-box .rows .lable span{;display: inline-block;color: #f04d4a;font-weight: 700;padding-right: 3px;}
+.search-box .rows .input input{border: 1px solid #ddd;width:150px;height: 32px;line-height: 32px;}
+.search-box .rows .input .btn-icon{display:inline-block;width:30px;height:32px;border:1px solid #ddd;margin-left:-1px;border-left:none;background:#fff url(../images/icons/search_btn_icon.png) left center no-repeat;}
+.search-box .rows .select{position: relative; width: 170px;border: 1px solid #ddd;height: 32px;line-height: 32px;overflow: hidden;}
+.search-box .rows .select select{ border: 0 none; color: #333; font-size:12px;padding: 5px 10px 6px 5px;outline: none;background: none;padding-right: 20px;width: 170px;}
+.search-box .btn{margin-left:10px;width: 78px;height: 34px;line-height:34px;background: #0d81e0;text-align: center;border-radius: 3px;}
+.search-box .btn a{color: #fff;display:block;font-size: 12px;}
+.right-btn{}
+.right-btn a{font-size: 14px;display: inline-block;background: #0d81e0;color: #fff;padding:0px 18px; height: 34px;border-radius: 3px;text-align: center;line-height: 34px;margin: 0 10px 0px 0;}
+.right-btn a:hover{ color: #ffffff;}
+.right-btn a:last-of-type{margin-right: 0;}
+
+/*搜索区域  结束*/
+
+/*表格 开始*/
+.department-box{margin:20px 0;}
+table{width: 100%;table-layout:fixed;}
+table tr{border-bottom: 1px solid #ddd;}
+table tr:hover{ background: #f6fbff;}
+table tr:first-child:hover{background: #e5e5e5;}
+table tr td{height: 44px;font-size: 14px;color: #656565;word-break:keep-all;white-space:nowrap;overflow:hidden;text-overflow:ellipsis; padding: 0 10px;}
+table tr:first-of-type{border-bottom: none; background: #e5e5e5;text-align: center;font-size: 16px;}
+table tr td.center{text-align: center;}
+table tr td a{display: inline-block;color: #0d81e0;padding: 0 6px;}
+table tr td a:hover{color:#0d81e0;}
+table tr td a.orange{color: #f0780e;}
+table tr td a.red{color: #e6253b;}
+table.grade.show tr td{word-break: break-all;white-space: inherit;}
+table tr td .line{width: 2px; height: 15px; background: #acacac; display: inline-block; vertical-align: middle; margin-top: -4px ;}
+/*全选开始*/
+table .table-tit td .checkbox{float:left;display: inline-block;padding-left:26px;background: url("../images/icons/form_check.png") no-repeat left 0px;}
+table .table-tit td .checkbox.curr{float:left;display: inline-block; padding-left:26px;background: url("../images/icons/form_check.png") no-repeat left 3px;}
+table .table-tit td .name{text-align: center;margin-left:-80px;}
+table td .checkbox{height: 40px; line-height: 40px; float:left;display: inline-block; padding-left:26px; width:auto;margin-right:15px;overflow:hidden;background: url("../images/icons/form_check.png") no-repeat left 10px;}
+table td .checkbox.curr{height: 40px; line-height: 40px; float:left;display: inline-block;  padding-left:26px;width:auto;margin-right:15px;overflow:hidden;background: url("../images/icons/form_check_on.png") no-repeat left 10px;}
+/*全选结束*/
+/*表格 结束*/
+/*分页开始*/
+.pages {margin-top: 25px;text-align: center;overflow: hidden;zoom: 1;}
+.pages a,.pages span {font-size: 12px;text-decoration: none;display: inline-block;height: 30px;line-height: 30px;margin-left: 4px;cursor: pointer;transition: all .2s;padding: 0 15px;border-radius: 2px;border: 1px solid #ddd;color: #666;background-color: #fff;}
+.pages .curr {border: 1px solid #0d81e0;color: #fff;background-color: #0d81e0;}
+.pages span:not(.current) {cursor: not-allowed;}
+.pages .input{width: 44px;display: inline-block;height: 30px;line-height: 30px;border-radius: 2px;border: 1px solid #ddd;color: #666;margin-left: 4px;}
+/*分页结束*/
+/*二级标题 开始*/
+.second-title-box{margin-top: 20px;}
+.second-title-box .second-title{vertical-align: middle;font-size: 14px;color: #333;border-bottom: 1px dashed #ddd;padding-bottom: 10px;}
+.second-title-box .second-title.space{margin:0 0 15px 0;overflow: hidden;}
+.second-title-box .second-title .tit{float: left; font-size:14px; margin-top: 5px;background: url(../images/icons/smart_platform_applicationtitle_dotted.png) no-repeat 0 center;}
+.second-title-box .second-title .tit span{padding-left: 10px;}
+.second-title-box .second-title .tit img{margin-right: 8px;vertical-align: middle;height: 20px;width: auto;}
+/*二级标题 结束*/
+
+/*---------表单样式开始-------------*/
+.layer-box{margin:15px;}
+/*提示开始*/
+.tips-word{margin: 15px 0 0;padding: 8px 10px;line-height: 20px;color: #333;font-size: 12px;background-color: #f5f9ff;border: 1px solid #c9e4ff;}
+.tips-word span{color: #f04d4a;font-weight: 700;padding-right: 5px;}
+/*提示结束*/
+.main-form .form-term .control .input:focus{border-style:solid;border-color: #0d81e0;box-shadow: 0px 0px 4px 0px rgba(47, 142, 237, 0.45);}
+/*表单填写提示 开始*/
+.form-prompt{font-size: 12px;color: #999;}
+/*表单填写提示 结束*/
+/*main表单   开始*/
+.main-form{margin-top: 20px;}
+.main-form .form-term{display: block;min-height: 34px; clear: both;margin-bottom: 10px;}
+.main-form .form-term .lable{float:left;width:100px;height:36px;line-height:36px;text-align: right;font-size: 14px;color: #333;margin-right: 10px;}
+.main-form .form-term .lable span{width:10px;display:inline-block;color: #f04d4a;font-weight: 700;padding-right: 5px;}
+.main-form .form-term .control{float: left;width:-moz-calc(100% - 110px); width:-webkit-calc(100% - 110px);width: calc(100% - 110px);}
+/*input开始*/
+.main-form .form-term .control .input{width: 270px; height: 34px;line-height: 34px;border: 1px solid #ddd;color: #333;background: #fff;margin-right: 10px;font-size: 14px;}
+.main-form .form-term .control .input.wid75{width: 75px;}
+.main-form .form-term .control .input.wid150{width:150px;}
+.main-form .form-term .control .input.readonly{background: #f8f8f8;}
+/*input结束*/
+/*select开始*/
+.main-form .form-term .control select{/*float:left;*/padding: 5px 10px 6px 5px;outline: none;background: none;width:233px; color:#666;border: 1px solid #ddd;height: 30px;line-height:30px;overflow: hidden; margin-right: 5px;}
+/*select结束*/
+/*上传图片开始*/
+.main-form .form-term .upload-pic{width: 100px;height: 100px;display:inline-block;overflow: hidden;margin-right:5px;}
+.main-form .form-term .upload-pic img{width: 100px;height: 100px;}
+.upload-pic input {width: 100px;  height: 100px;  position: absolute;  left: 0;  top: 0;  opacity: 0;}
+/*上传图片结束*/
+/*input不可编辑开始*/
+.main-form .form-term .input-unedit{font-size:14px;color: #666;line-height: 32px;word-break: break-all;margin-top: 2px;}
+.main-form .form-term .input-unedit.gray{color:#666;}
+.main-form .form-term .input-unedit .info-text{display:inline-block;width:80px;white-space:nowrap;text-overflow:ellipsis; overflow: hidden;margin-right:10px;}
+/*复选框开始*/
+/*input不可编辑结束*/
+/*radio开始*/
+.main-form .form-term .control .radio{display:inline-block;height: 36px;line-height: 36px;margin-right: 8px;font-size: 14px;color: #555;padding-left:20px;width:60px; white-space:nowrap;text-overflow:ellipsis;overflow: hidden;background: url(../images/icons/experience_form_radio.png) no-repeat left center;}
+.main-form .form-term .control .radio.curr{display:inline-block;height: 36px;line-height: 36px;margin-right: 8px;font-size: 14px;color: #555;padding-left:20px;width:60px; white-space:nowrap;text-overflow:ellipsis;overflow: hidden;background: url(../images/icons/experience_form_radio_on.png) no-repeat left center;}
+/*radio结束*/
+/*checkbox 开始*/
+.main-form .form-term .control .checkbox{font-size: 14px;color: #555;display:inline-block;height: 30px;line-height: 30px;margin-right: 8px;padding-left:16px;width:80px; white-space:nowrap;text-overflow:ellipsis;overflow: hidden;background: url(../images/icons/experience_form_check.png) no-repeat left 5px;}
+.main-form .form-term .control .checkbox.curr{display:inline-block;height: 30px;line-height: 30px;margin-right: 8px;padding-left:16px;width:80px; white-space:nowrap;text-overflow:ellipsis;overflow: hidden;background: url(../images/icons/experience_form_check_on.png) no-repeat left 8px;}
+/*checkbox 结束*/
+/*应用复选开始*/
+.main-form .form-term .control .application{display: inline-block;margin:0 5px 5px 0;}
+.main-form .form-term .control .application a{display: inline-block; font-size:12px;width:80px;padding:0 10px;white-space:nowrap;text-overflow:ellipsis;overflow: hidden; line-height:26px;border:1px solid #ccc; text-align: center;border-radius: 3px;color:#555; }
+.main-form .form-term .control .application.curr a{display: inline-block; font-size:14px;width:80px;padding:0 10px;white-space:nowrap;text-overflow:ellipsis;overflow: hidden; line-height:26px;text-align: center;border-radius: 3px; background: url(../images/icons/media_icon_classify.png) no-repeat right bottom;border:1px solid #2a91e4;  }
+/*应用复选结束*/
+/*上传文件开始*/
+.main-form .form-term .upload-btn a{position:absolute; top:0; left:252px;display: inline-block; vertical-align: middle;margin-left:3px;height: 28px;line-height: 28px;background: #4c9dfb;border-radius: 2px;color: #fff;font-size: 12px;padding: 0 15px;overflow: hidden;;}
+.main-form .form-term .upload-btn.gray a{background:#ddd;border:1px solid #ddd; color:#333;display: inline-block;position:absolute; top:0; left:190px;padding:0 20px;height: 30px;border-radius: 3px;text-align: center;line-height: 30px;margin-bottom: 10px;}
+.main-form .form-term .upload-btn input{position:absolute; top:0; left:252px; width:80px; height:28px; opacity:0; filter:alpha(opacity=0);}
+/*上传文件结束*/
+/*上传多个文件开始*/
+.main-form .form-term .control .upload-choose{position:relative;min-height: 28px;width:430px;border: 1px solid #ddd;padding-top:5px;}
+.main-form .form-term .upload-btn.choose-file input{position:absolute; top:0; left:445px; width:80px; height:28px; opacity:0; filter:alpha(opacity=0);}
+.main-form .form-term .upload-btn .choose-file{position: absolute;top: 0;left: 445px;display: inline-block;vertical-align: middle;margin-left: 3px;height: 28px;line-height: 28px;background: #4c9dfb;border-radius: 2px;color: #fff;font-size: 12px;padding: 0 15px;overflow: hidden;}
+.main-form .form-term .control .upload-choose .file{position: relative;border: 1px solid #ccc;border-radius: 3px;padding: 0 21px 0 10px;float: left;margin:0 5px 5px;background: #f5f5f5;box-sizing: border-box;}
+.main-form .form-term .control .upload-choose .file a{display: block; max-width: 80px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;line-height: 22px;color: #333;font-size: 12px;height: 22px;}
+.main-form .form-term .control .upload-choose .file span{position: absolute;right: 3px;top: -3px;font-size: 20px;color: #999;cursor: pointer;}
+/*上传多个文件结束*/
+
+/*弹出层控件开始*/
+.main-form .form-term .control .layer-row {display: inline-block;}
+.main-form .form-term .control .layer-row .input{vertical-align: middle;margin-right: 5px;}
+.main-form .form-term .control .layer-row .layer-btn{position: relative; display: inline-block; vertical-align: middle;margin-left:3px;height: 28px;line-height: 28px;background: #4c9dfb;border-radius: 2px;color: #fff;font-size: 12px;padding: 0 15px;overflow: hidden;}
+/*弹出层控件结束*/
+
+/*textarea开始*/
+.main-form .form-term .control .textarea{width:396px;max-width: 400px;height: 170px;line-height: 20px;border: 1px solid #ddd;color: #333;background: #fff;font-size: 14px;color: #333;resize: none;}
+/*textarea结束*/
+/*时间输入框开始*/
+.main-form .form-term .control .space{color:#666;}
+.main-form .form-term .control .date { background: #fff url(../images/icons/form_date.png) no-repeat right;}
+/*时间输入框结束*/
+.main-form .form-term .control .form-msg {color: #ff0000;background: url(../images/icons/form_msg.png) no-repeat 0 center;font-size: 12px;padding-left: 16px;margin-top:5px;}
+/*选择弹出层  开始*/
+.main-form .form-term .control{position: relative;}
+.main-form .form-term .control .input.choose {padding: 0 35px 0 10px;width: 275px;}
+.main-form .form-term .control .del-btn { position: absolute;left: 300px;top: 10px; background: url(../images/icons/edit_mycard_del.png) no-repeat; width: 20px; height: 20px;}
+.main-form .form-term .control .del-btn:hover { background: url(../images/icons/edit_mycard_del_hover.png) no-repeat;}
+.main-form .form-term .control .btns a{display:block;padding:0 15px;font-size:14px;color:#fff;height:30px;line-height:30px;background: #3aace9;border-radius: 3px;text-align: center;}
+/*选择弹出层  结束*/
+/*main表单 结束*/
+/*formbtn开始*/
+.form-btn{margin-left:110px; margin-top: 20px;}
+.form-btn a{font-size: 14px;display: inline-block;background: #0d81e0;color: #fff;min-width: 80px;padding: 0 10px;height: 36px;border-radius: 3px;text-align: center;line-height: 36px;margin: 0 10px 5px 0;border: 1px solid transparent;}
+.form-btn a.back{background: no-repeat; border: 1px solid #0d81e0; color: #0d81e0;}
+.form-btn a:hover{background:#0c76cc;color: #fff;}
+.form-btn a.back:hover{background: #0d81e0; color: #fff;}
+/*formbtn结束*/
+/*可编辑表单 开始*/
+.main-form .form-term .exit-unedit{float: left; font-size:12px;color: #333;line-height: 20px;margin-top:4px;word-break: break-all;}
+.main-form .form-term .exit-info{float: left;display: none;}
+.main-form .form-term .exit-info input{ width: 180px; height:28px; line-height:28px;border: 1px solid #ddd;}
+.main-form .form-term .exit-box{float: left; margin-left:15px; font-size: 12px;line-height: 30px;}
+.main-form .form-term .exit-box a{color: #3aace9;}
+.main-form .form-term .exit-box .btn-finish{display: none;}
+/*可编辑表单 结束*/
+/*标签开始*/
+.main-form .form-term .control .list{position: relative;border: 1px solid #0d81e0;border-radius: 3px;padding: 0 30px 0 16px;float: left;margin: 5px 0px;margin-right: 10px; }
+.main-form .form-term .control .list a{display: block;line-height: 28px;color: #333;font-size: 14px;height: 28px;}
+.main-form .form-term .control .list span{position: absolute;right: 10px;top: 0px;font-size: 20px;color: #4197ee;cursor: pointer;}
+.main-form .form-term .control .more{border: 1px solid #0d81e0;border-radius: 3px;padding: 0 16px;float: left;height: 34px;}
+.main-form .form-term .control .more img{cursor: pointer;margin-top: 12px;}
+.main-form .form-term .control .text{border: none;  margin: 0 5px 10px;padding: 0;}
+.main-form .form-term .control .text input{width: 123px; height: 25px; outline: none; border: 1px solid #ccc; font-size: 14px; color: #333; border-radius: 3px; text-align: center;padding:0;}
+.main-form .form-term .control .more1{border: 1px solid #0d81e0;border-radius: 3px;padding: 0 16px;float: left;height:28px; margin: 5px 0px;}
+.main-form .form-term .control .more1 img{cursor: pointer;margin-top: 8px;}
+/*标签结束*/
+/*输入段落标题开始*/
+.headings{ width: 100%; margin-top: 20px;border-bottom:1px solid #ccc;}
+.headings input{width:98%; height:34px; outline: none; padding-left: 10px; border: none; font-size: 14px; line-height: 34px;}
+/*输入段落标题结束*/
+
+/*---------right公共样式 结束---------*/

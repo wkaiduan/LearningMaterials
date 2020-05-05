@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3.2.MySQL 删除数据表</title>
+    <link type="text/css" rel="stylesheet" href="../css/common.css">
+    <link type="text/css" rel="stylesheet" href="../css/public.css">
+    <style>
+    </style>
+</head>
+<body>
+<div id="page-node-content">
+    <div class="content-tit clearfix">
+       <a href="简介.html" target="mainFrame" >首页</a>
+       &gt;
+       <a href="../mysql/MysqldeleteTable.html" target="mainFrame" >3.2.MySQL 删除数据表</a>
+    </div>
+    <div class="content-content clearfix">
+        <div class="living-example fl">
+                <h2>3.2.MySQL 删除数据表</h2>
+                <h3>MySQL中删除数据表是非常容易操作的， 但是你再进行删除表操作时要非常小心，因为执行删除命令后所有数据都会消失。</h3>
+                <pre>
+                    DROP TABLE student;
+                </pre>
+               <h2>3.2.1. 在命令提示窗口中删除数据表</h2>
+               <h3>在mysql>命令提示窗口中删除数据表SQL语句为 DROP TABLE ：</h3>
+                <pre>
+                    root@host# mysql -u root -p <br/>
+					Enter password:******* <br/>
+					mysql> use ruance; <br/>
+					Database changed  <br/>
+					mysql> DROP TABLE student <br/>
+					Query OK, 0 rows affected (0.8 sec) <br/>
+					mysql>
+                </pre>
+              	<br />
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../js/jquery.min.js" ></script>
+<script type="text/javascript" src="../js/nicescrool.js"></script>
+<script type="text/javascript">
+    $(function(){
+
+        //美化滚动条
+        $(".result,.living-example").eq(0).niceScroll({
+            cursorcolor: "#bbb", // 改变滚动条颜色，使用16进制颜色值
+            cursorwidth: "4px", // 滚动条的宽度，单位：便素
+            cursorborder: "0px solid #e0e0e0", // CSS方式定义滚动条边框
+            cursorborderradius: "3px", // 滚动条圆角（像素）
+            autohidemode: 'false', // 隐藏滚动条的方式, 可用的值: true | // 无滚动时隐藏 "cursor" | // 隐藏 false | // 不隐藏, "leave" | // 仅在指针离开内容时隐藏"hidden" | // 一直隐藏  "scroll", // 仅在滚动时显示
+            background: "#e0e0e0", // 轨道的背景颜色
+        });
+    });
+
+</script>
+</html>

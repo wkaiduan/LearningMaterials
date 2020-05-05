@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3.13.MySQL NULL 值处理</title>
+    <link type="text/css" rel="stylesheet" href="../css/common.css">
+    <link type="text/css" rel="stylesheet" href="../css/public.css">
+    <style>
+    </style>
+</head>
+<body>
+<div id="page-node-content">
+    <div class="content-tit clearfix">
+       <a href="简介.html" target="mainFrame" >首页</a>
+       &gt;
+       <a href="../mysql/Mysqlnull.html" target="mainFrame" >3.13.MySQL NULL 值处理</a>
+    </div>
+    <div class="content-content clearfix">
+        <div class="living-example fl">
+                <h2>3.13.MySQL NULL 值处理</h2>
+                <h3>我们已经知道 MySQL 使用 SQL SELECT 命令及 WHERE 子句来读取数据表中的数据,但是当提供的查询条件字段为 NULL 时，该命令可能就无法正常工作。</h3>
+                <h3>为了处理这种情况，MySQL提供了三大运算符:</h3>
+                <p class="tip">&nbsp;IS NULL: 当列的值是 NULL,此运算符返回 true。</p>
+                <p class="tip">&nbsp;IS NOT NULL: 当列的值不为 NULL, 运算符返回 true。</p>
+                <p class="tip">&nbsp;<=>: 比较操作符（不同于=运算符），当比较的的两个值为 NULL 时返回 true。</p>
+                <p class="tip">关于 NULL 的条件比较运算是比较特殊的。你不能使用 = NULL 或 != NULL 在列中查找 NULL 值 。</p>
+                 <p class="tip">在 MySQL 中，NULL 值与任何其它值的比较（即使是 NULL）永远返回 false，即 NULL = NULL 返回false 。</p>
+                <p class="tip">MySQL 中处理 NULL 使用 IS NULL 和 IS NOT NULL 运算符。</p>
+              	<br />
+              
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../js/jquery.min.js" ></script>
+<script type="text/javascript" src="../js/nicescrool.js"></script>
+<script type="text/javascript">
+    $(function(){
+
+        //美化滚动条
+        $(".result,.living-example").eq(0).niceScroll({
+            cursorcolor: "#bbb", // 改变滚动条颜色，使用16进制颜色值
+            cursorwidth: "4px", // 滚动条的宽度，单位：便素
+            cursorborder: "0px solid #e0e0e0", // CSS方式定义滚动条边框
+            cursorborderradius: "3px", // 滚动条圆角（像素）
+            autohidemode: 'false', // 隐藏滚动条的方式, 可用的值: true | // 无滚动时隐藏 "cursor" | // 隐藏 false | // 不隐藏, "leave" | // 仅在指针离开内容时隐藏"hidden" | // 一直隐藏  "scroll", // 仅在滚动时显示
+            background: "#e0e0e0", // 轨道的背景颜色
+        });
+    });
+
+</script>
+</html>

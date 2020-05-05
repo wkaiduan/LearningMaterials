@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3.7.MySQL DELETE 语句</title>
+    <link type="text/css" rel="stylesheet" href="../css/common.css">
+    <link type="text/css" rel="stylesheet" href="../css/public.css">
+    <style>
+    </style>
+</head>
+<body>
+<div id="page-node-content">
+    <div class="content-tit clearfix">
+       <a href="简介.html" target="mainFrame" >首页</a>
+       &gt;
+       <a href="../mysql/Mysqldelete.html" target="mainFrame" >3.7.MySQL DELETE 语句</a>
+    </div>
+    <div class="content-content clearfix">
+        <div class="living-example fl">
+                <h2>3.7.MySQL DELETE 语句</h2>
+                <h3>你可以使用 SQL 的 DELETE FROM 命令来删除 MySQL 数据表中的记录。</h3>
+                <h3>你可以在 mysql> 命令提示符或 PHP 脚本中执行该命令。 以下是 SQL DELETE 语句从 MySQL 数据表中删除数据的通用语法：</h3>
+                <pre>
+                 DELETE FROM table_name [WHERE Clause]
+                </pre>
+                 <p class="tip">如果没有指定 WHERE 子句，MySQL 表中的所有记录将被删除。</p>
+                 <p class="tip">你可以在 WHERE 子句中指定任何条件</p>
+                 <p class="tip">您可以在单个表中一次性删除记录。</p><br />
+                 <p class="tip">当你想删除数据表中指定的记录时 WHERE 子句是非常有用的。</p>
+              	<br />
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../js/jquery.min.js" ></script>
+<script type="text/javascript" src="../js/nicescrool.js"></script>
+<script type="text/javascript">
+    $(function(){
+
+        //美化滚动条
+        $(".result,.living-example").eq(0).niceScroll({
+            cursorcolor: "#bbb", // 改变滚动条颜色，使用16进制颜色值
+            cursorwidth: "4px", // 滚动条的宽度，单位：便素
+            cursorborder: "0px solid #e0e0e0", // CSS方式定义滚动条边框
+            cursorborderradius: "3px", // 滚动条圆角（像素）
+            autohidemode: 'false', // 隐藏滚动条的方式, 可用的值: true | // 无滚动时隐藏 "cursor" | // 隐藏 false | // 不隐藏, "leave" | // 仅在指针离开内容时隐藏"hidden" | // 一直隐藏  "scroll", // 仅在滚动时显示
+            background: "#e0e0e0", // 轨道的背景颜色
+        });
+    });
+
+</script>
+</html>

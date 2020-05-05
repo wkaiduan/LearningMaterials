@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3.10. MySQL 排序</title>
+    <link type="text/css" rel="stylesheet" href="../css/common.css">
+    <link type="text/css" rel="stylesheet" href="../css/public.css">
+    <style>
+    </style>
+</head>
+<body>
+<div id="page-node-content">
+    <div class="content-tit clearfix">
+       <a href="简介.html" target="mainFrame" >首页</a>
+       &gt;
+       <a href="../mysql/Mysqlorder.html" target="mainFrame" >3.10. MySQL 排序</a>
+    </div>
+    <div class="content-content clearfix">
+        <div class="living-example fl">
+                <h2>3.10. MySQL 排序</h2>
+                <h3>如果我们需要对读取的数据进行排序，我们就可以使用 MySQL 的 ORDER BY 子句来设定你想按哪个字段哪种方式来进行排序，再返回搜索结果。 以下是 SQL SELECT 语句使用 ORDER BY 子句将查询数据排序后再返回数据：</h3>
+                <h3>MySQL UNION 操作符语法格式：</h3>
+                <pre>
+                 SELECT field1, field2,...fieldN table_name1, table_name2...<br />
+				 ORDER BY field1, [field2...] [ASC [DESC]]
+                </pre>
+                 <p class="tip">你可以使用任何字段来作为排序的条件，从而返回排序后的查询结果。</p>
+                 <p class="tip">你可以设定多个字段来排序。</p>
+                 <p class="tip">你可以使用 ASC 或 DESC 关键字来设置查询结果是按升序或降序排列。 默认情况下，它是按升序排列。</p>
+                 <p class="tip">你可以添加 WHERE…LIKE 子句来设置条件。</p>
+              	<br />
+              
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../js/jquery.min.js" ></script>
+<script type="text/javascript" src="../js/nicescrool.js"></script>
+<script type="text/javascript">
+    $(function(){
+
+        //美化滚动条
+        $(".result,.living-example").eq(0).niceScroll({
+            cursorcolor: "#bbb", // 改变滚动条颜色，使用16进制颜色值
+            cursorwidth: "4px", // 滚动条的宽度，单位：便素
+            cursorborder: "0px solid #e0e0e0", // CSS方式定义滚动条边框
+            cursorborderradius: "3px", // 滚动条圆角（像素）
+            autohidemode: 'false', // 隐藏滚动条的方式, 可用的值: true | // 无滚动时隐藏 "cursor" | // 隐藏 false | // 不隐藏, "leave" | // 仅在指针离开内容时隐藏"hidden" | // 一直隐藏  "scroll", // 仅在滚动时显示
+            background: "#e0e0e0", // 轨道的背景颜色
+        });
+    });
+
+</script>
+</html>

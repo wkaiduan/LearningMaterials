@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.5.app与web测试的主要区别</title>
+    <link type="text/css" rel="stylesheet" href="../css/common.css">
+    <link type="text/css" rel="stylesheet" href="../css/public.css">
+    <style>
+    </style>
+</head>
+<body>
+<div id="page-node-content">
+    <div class="content-tit clearfix">
+       <a href="简介.html" target="mainFrame" >首页</a>
+       &gt;
+       <a href="html4.html" target="mainFrame" >2.5.app与web测试的主要区别</a>
+    </div>
+    <div class="content-content clearfix">
+        <div class="living-example fl">
+                <h2>2.5.app与web测试的主要区别</h2>
+                <h3>2.5.1.app特有的测试场景</h3>
+                   <!--<pre>
+                    document.write("&lt;p&gt;This is a paragraph&lt;/p&gt;");
+                   </pre>-->
+                <p class="tip">默认键盘（如输入手机号码等场景时默认调用数字键盘）</p>
+                <p class="tip">九宫格、全键盘</p>
+                <p class="tip">多点触控</p>
+                <p class="tip">屏幕分辨率</p>
+                <p class="tip">安装卸载，覆盖安装，杀进程再启动，清理缓存(安卓)</p>
+                <p class="tip">手机权限（如相机、图片、本地文件、麦克风、通讯录、短信等）</p>
+                <p class="tip">手机自带按钮（如Android的后退、home键，iOS的home键）</p>
+                <p class="tip">机型、系统、分辨率等适配</p>
+                <p class="tip">emoji表情输入</p>
+                <p class="tip">GPS定位</p>
+                <p class="tip">电量、内存、CPU、流量等专项测试</p>
+                <p class="tip">调用其他app（如支付宝、微信支付等功能）</p>
+                <p class="tip">网络切换</p>
+                <br />
+                <h3>2.5.2.web特有的测试场景</h3>
+                <p class="tip">多浏览器登录，退出</p>
+                <p class="tip">浏览器缓存（如cookie清理，表单数据缓存） </p>
+                <p class="tip">浏览器前进、后退</p>
+                <p class="tip">浏览器兼容性</p>
+                <p class="tip">浏览器最大化、还原，页面自适应</p>
+                <p class="tip">输入全角、半角</p>
+                <p class="tip">js渲染</p>
+              	<br />
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../js/jquery.min.js" ></script>
+<script type="text/javascript" src="../js/nicescrool.js"></script>
+<script type="text/javascript">
+    $(function(){
+
+        //美化滚动条
+        $(".result,.living-example").eq(0).niceScroll({
+            cursorcolor: "#bbb", // 改变滚动条颜色，使用16进制颜色值
+            cursorwidth: "4px", // 滚动条的宽度，单位：便素
+            cursorborder: "0px solid #e0e0e0", // CSS方式定义滚动条边框
+            cursorborderradius: "3px", // 滚动条圆角（像素）
+            autohidemode: 'false', // 隐藏滚动条的方式, 可用的值: true | // 无滚动时隐藏 "cursor" | // 隐藏 false | // 不隐藏, "leave" | // 仅在指针离开内容时隐藏"hidden" | // 一直隐藏  "scroll", // 仅在滚动时显示
+            background: "#e0e0e0", // 轨道的背景颜色
+        });
+    });
+
+</script>
+</html>

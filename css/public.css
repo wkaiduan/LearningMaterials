@@ -1,0 +1,26 @@
+#frame-main{position:fixed;top:50px;left:200px;right:0;bottom:0px;background: #f5f5f5;}
+body{background: none}
+/*内容区 头部 开始*/
+#page-node-content{position: absolute;top: 10px; left: 10px;right: 10px; bottom: 40px}
+#page-node-content .content-tit{height: 40px; line-height: 40px; font-size: 14px;position: absolute;top: 0px; left: 0px;right: 0px; bottom: 0px;background: #ffffff;padding: 0 10px}
+#page-node-content .content-tit a{color: #666666;}
+#page-node-content .content-tit a:hover{color: #26A59A;}
+/*内容区 头部 结束*/
+/*内容区开始*/
+#page-node-content .content-content{position: absolute;top: 50px;right: 0px;left: 0px; bottom: 0px;background: #ffffff;padding: 10px;overflow-y: auto;}
+.content-content .living-example{width:600px; border: 1px solid #d0d6d6;padding: 10px;position: absolute;top: 10px;right: 10px;left: 10px; bottom: 10px}
+.content-content .result{width:calc(100% - 676px); border: 1px solid #d0d6d6;padding: 10px;position: absolute;top: 10px;right: 10px; bottom: 10px}
+/*内容区 结束*/
+p{ display: block;  -webkit-margin-before: 0em;  -webkit-margin-after: 0em;  -webkit-margin-start: 0px;  -webkit-margin-end: 0px;font-size: 14px;line-height: 30px;}
+h2 {  display: block;  font-size: 1.5em;  -webkit-margin-before: 0.5em;  -webkit-margin-after: 0.5em;  -webkit-margin-start: 0px;  -webkit-margin-end: 0px;  font-weight: bold;  }
+pre { width:calc(100% - 20px); margin: 10px 0; padding: 10px; border: 1px dotted #785;  background: #f5f5f5;  line-height: 1.5;  font-family: Consolas;  }
+pre { white-space: normal;  }
+
+/*查看源代码 开始*/
+.chakan{width: 100px;box-shadow:0px 0px 4px #406d85;line-height: 30px; height: 30px; background: #1b6d85; text-align: center;color: #ffffff; margin-top: 20px;}
+/*查看源代码 结束*/
+
+button{height: 28px;line-height: 28px;padding:0px 10px; background: #26A59A;border:none;color: #ffffff;}
+input,select{height: 28px;line-height: 28px;padding:5px; font-size: 14px}
+
+

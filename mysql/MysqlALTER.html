@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3.16. MySQL ALTER命令</title>
+    <link type="text/css" rel="stylesheet" href="../css/common.css">
+    <link type="text/css" rel="stylesheet" href="../css/public.css">
+    <style>
+    </style>
+</head>
+<body>
+<div id="page-node-content">
+    <div class="content-tit clearfix">
+       <a href="简介.html" target="mainFrame" >首页</a>
+       &gt;
+       <a href="../mysql/MysqlALTER.html" target="mainFrame" >3.16. MySQL ALTER命令</a>
+    </div>
+    <div class="content-content clearfix">
+        <div class="living-example fl">
+                <h2>3.16.MySQL ALTER命令</h2>
+                <p class="tip">当我们需要修改数据表名或者修改数据表字段时，就需要使用到MySQL ALTER命令。</p>
+         
+                <p class="tip">开始本章教程前让我们先创建一张表，表名为：testalter_tbl。</p>
+                <pre>
+                 root@host# mysql -u root -p password;<br />
+				Enter password:*******<br />
+				mysql> use RUNOOB;<br />
+				Database changed<br />
+				mysql> create table testalter_tbl<br />
+				    -> (<br />
+				    -> i INT,<br />
+				    -> c CHAR(1)<br />
+				    -> );<br />
+				Query OK, 0 rows affected (0.05 sec)<br />
+				mysql> SHOW COLUMNS FROM testalter_tbl;<br />
+				+-------+---------+------+-----+---------+-------+<br />
+				| Field | Type    | Null | Key | Default | Extra |<br />
+				+-------+---------+------+-----+---------+-------+<br />
+				| i     | int(11) | YES  |     | NULL    |       |<br />
+				| c     | char(1) | YES  |     | NULL    |       |<br />
+				+-------+---------+------+-----+---------+-------+<br />
+				2 rows in set (0.00 sec)
+                </pre>
+                 <h3>3.16.1. 删除，添加或修改表字段</h3>
+                 <p class="tip">如下命令使用了 ALTER 命令及 DROP 子句来删除以上创建表的 i 字段：</p>
+                 <pre>
+                 mysql> ALTER TABLE testalter_tbl  DROP i;
+                </pre>
+ 					<p class="tip">如果数据表中只剩余一个字段则无法使用DROP来删除字段。 MySQL 中使用 ADD 子句来向数据表中添加列，如下实例在表 testalter_tbl 中添加 i 字段，并定义数据类型:</p>               
+                 <pre>
+                  mysql> ALTER TABLE testalter_tbl ADD i INT;
+                </pre>
+                <p class="tip">执行以上命令后，i 字段会自动添加到数据表字段的末尾。</p>
+                 <pre>
+                    mysql> SHOW COLUMNS FROM testalter_tbl;<br />
+					+-------+---------+------+-----+---------+-------+<br />
+					| Field | Type    | Null | Key | Default | Extra |<br />
+					+-------+---------+------+-----+---------+-------+<br />
+					| c     | char(1) | YES  |     | NULL    |       |<br />
+					| i     | int(11) | YES  |     | NULL    |       |<br />
+					+-------+---------+------+-----+---------+-------+<br />
+					2 rows in set (0.00 sec)
+                </pre>
+                <p  class="tip">如果你需要指定新增字段的位置，可以使用MySQL提供的关键字 FIRST (设定位第一列)， AFTER 字段名（设定位于某个字段之后）。 尝试以下 ALTER TABLE 语句, 在执行成功后，使用 SHOW COLUMNS 查看表结构的变化：</p>
+                <pre>
+                    ALTER TABLE testalter_tbl DROP i;<br />
+					ALTER TABLE testalter_tbl ADD i INT FIRST;<br />
+					ALTER TABLE testalter_tbl DROP i;<br />
+					ALTER TABLE testalter_tbl ADD i INT AFTER c;<br />
+                </pre>
+                <p class="tip">FIRST 和 AFTER 关键字只占用于 ADD 子句，所以如果你想重置数据表字段的位置就需要先使用 DROP 删除字段然后使用 ADD 来添加字段并设置位置。</p>
+               
+               	 <h3>3.16.2.修改字段类型及名称</h3>
+                 <p class="tip">如果需要修改字段类型及名称, 你可以在ALTER命令中使用 MODIFY 或 CHANGE 子句 。 例如，把字段 c 的类型从 CHAR(1) 改为 CHAR(10)，可以执行以下命令:</p>
+                 <pre>
+                  mysql> ALTER TABLE testalter_tbl MODIFY c CHAR(10);	
+                </pre>
+                <p class="tip">使用 CHANGE 子句, 语法有很大的不同。 在 CHANGE 关键字之后，紧跟着的是你要修改的字段名，然后指定新字段名及类型。尝试如下实例：</p>
+                <pre>
+                 mysql> ALTER TABLE testalter_tbl CHANGE i j BIGINT;
+                </pre>
+                 <pre>
+                 mysql> ALTER TABLE testalter_tbl CHANGE j j INT;
+                </pre>
+                
+                <h3>3.16.3. ALTER TABLE 对 Null 值和默认值的影响</h3>
+                <p class="tip">当你修改字段时，你可以指定是否包含只或者是否设置默认值。 以下实例，指定字段 j 为 NOT NULL 且默认值为100 。</p>
+                <pre>
+                 mysql> ALTER TABLE testalter_tbl<br />
+    				-> MODIFY j BIGINT NOT NULL DEFAULT 100;
+					);
+                </pre>
+                <p class="tip">如果你不设置默认值，MySQL会自动设置该字段默认为 NULL。</p>
+                	
+                <h3>3.16.4.使用ALTER 命令添加和删除索引</h3>
+                 <p class="tip">你可以使用 ALTER 来修改字段的默认值，尝试以下实例：</p>
+                  <pre>
+                mysql> ALTER TABLE testalter_tbl ALTER i SET DEFAULT 1000;<br />
+				mysql> SHOW COLUMNS FROM testalter_tbl;<br />
+				+-------+---------+------+-----+---------+-------+<br />
+				| Field | Type    | Null | Key | Default | Extra |<br />
+				+-------+---------+------+-----+---------+-------+<br />
+				| c     | char(1) | YES  |     | NULL    |       |<br />
+				| i     | int(11) | YES  |     | 1000    |       |<br />
+				+-------+---------+------+-----+---------+-------+<br />
+				2 rows in set (0.00 sec)
+                </pre>
+                 <p class="tip">你也可以使用 ALTER 命令及 DROP子句来删除字段的默认值，如下实例：</p>
+                  <pre>
+		            mysql> ALTER TABLE testalter_tbl ALTER i DROP DEFAULT;<br />
+					mysql> SHOW COLUMNS FROM testalter_tbl;<br />
+					+-------+---------+------+-----+---------+-------+<br />
+					| Field | Type    | Null | Key | Default | Extra |<br />
+					+-------+---------+------+-----+---------+-------+<br />
+					| c     | char(1) | YES  |     | NULL    |       |<br />
+					| i     | int(11) | YES  |     | NULL    |       |<br />
+					+-------+---------+------+-----+---------+-------+<br />
+					2 rows in set (0.00 sec)<br />
+					Changing a Table Type:
+                </pre>
+                 <p class="tip">修改数据表类型，可以使用 ALTER 命令及 TYPE 子句来完成。尝试以下实例，我们将表 testalter_tbl 的类型修改为 MYISAM ：</p>
+                 
+                 <p class="tip">ALTER TABLE tbl_name ADD INDEX index_name (column_list): 添加普通索引，索引值可出现多次。</p>
+                 <p class="tip">注意：查看数据表类型可以使用 SHOW TABLE STATUS 语句。</p>
+                  <pre>
+                   mysql> ALTER TABLE testalter_tbl ENGINE = MYISAM;<br />
+					mysql>  SHOW TABLE STATUS LIKE 'testalter_tbl'\G<br />
+					*************************** 1. row ****************<br />
+					           Name: testalter_tbl<br />
+					           Type: MyISAM<br />
+					     Row_format: Fixed<br />
+					           Rows: 0<br />
+					 Avg_row_length: 0<br />
+					    Data_length: 0<br />
+					Max_data_length: 25769803775<br />
+					   Index_length: 1024<br />
+					      Data_free: 0<br />
+					 Auto_increment: NULL<br />
+					    Create_time: 2007-06-03 08:04:36<br />
+					    Update_time: 2007-06-03 08:04:36<br />
+					     Check_time: NULL<br />
+					 Create_options:<br />
+					        Comment:<br />
+					1 row in set (0.00 sec)<br />
+                </pre>
+                <h3>3.16.5.修改表名</h3>
+                <p class="tip">如果需要修改数据表的名称，可以在 ALTER TABLE 语句中使用 RENAME 子句来实现。 尝试以下实例将数据表 testalter_tbl 重命名为 alter_tbl：</p>
+                <pre>
+                 mysql> ALTER TABLE testalter_tbl RENAME TO alter_tbl;
+                </pre>
+                
+                <p class="tip">ALTER 命令还可以用来创建及删除MySQL数据表的索引，该功能我们会在接下来的章节中介绍。</p>
+              	<br />
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../js/jquery.min.js" ></script>
+<script type="text/javascript" src="../js/nicescrool.js"></script>
+<script type="text/javascript">
+    $(function(){
+
+        //美化滚动条
+        $(".result,.living-example").eq(0).niceScroll({
+            cursorcolor: "#bbb", // 改变滚动条颜色，使用16进制颜色值
+            cursorwidth: "4px", // 滚动条的宽度，单位：便素
+            cursorborder: "0px solid #e0e0e0", // CSS方式定义滚动条边框
+            cursorborderradius: "3px", // 滚动条圆角（像素）
+            autohidemode: 'false', // 隐藏滚动条的方式, 可用的值: true | // 无滚动时隐藏 "cursor" | // 隐藏 false | // 不隐藏, "leave" | // 仅在指针离开内容时隐藏"hidden" | // 一直隐藏  "scroll", // 仅在滚动时显示
+            background: "#e0e0e0", // 轨道的背景颜色
+        });
+    });
+
+</script>
+</html>

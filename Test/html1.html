@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1.1. 什么是软件测试</title>
+    <link type="text/css" rel="stylesheet" href="../css/common.css">
+    <link type="text/css" rel="stylesheet" href="../css/public.css">
+    <style>
+    </style>
+</head>
+<body>
+<div id="page-node-content">
+    <div class="content-tit clearfix">
+       <a href="简介.html" target="mainFrame" >首页</a>
+       &gt;
+       <a href="../Test/html1.html" target="mainFrame" >1.1. 什么是软件测试</a>
+    </div>
+    <div class="content-content clearfix">
+        <div class="living-example fl">
+                <h2>1.1. 什么是软件测试</h2>
+                <h3>首先来看一下百度百科的解释</h3>
+        <!--        <pre>
+                    软件测试（英语：Software Testing），描述一种用来促进鉴定软件的正确性、完整性、安全性和质量的过程。换句话说，软件测试是一种实际输出与预期输出之间的审核或者比较过程。软件测试的经典定义是：在规定的条件下对程序进行操作，以发现程序错误，衡量软件质量，并对其是否能满足设计要求进行评估的过程。
+                    <br>
+                    document.write("&lt;p&gt;This is a paragraph&lt;/p&gt;");
+                </pre>-->
+                <p class="tip">软件测试（英语：Software Testing），描述一种用来促进鉴定软件的正确性、完整性、安全性和质量的过程。换句话说，软件测试是一种实际输出与预期输出之间的审核或者比较过程。软件测试的经典定义是：在规定的条件下对程序进行操作，以发现程序错误，衡量软件质量，并对其是否能满足设计要求进行评估的过程。</p>
+                <br />
+                <p class="tip">它是帮助识别开发完成（中间或最终的版本）的计算机软件（整体或部分）的正确度(correctness) 、完全度(completeness)和质量(quality)的软件过程；是SQA(software quality assurance)的重要子域。 Glenford J.Myers曾对软件测试的目的提出过以下观点：</p>
+                <p class="tip">1,测试是为了发现程序中的错误而执行程序的过程。<br />
+                               2,好的测试方案是极可能发现迄今为止尚未发现的错误的测试方案。<br />
+                               3,成功的测试是发现了至今为止尚未发现的错误的测试。<br />
+                               4,测试并不仅仅是为了找出错误。通过分析错误产生的原因和错误的发生趋势，可以帮助项目管理者发现当前软件开发过程中的缺陷，以便及时改进。<br />
+                               5,这种分析也能帮助测试人员设计出有针对性的测试方法，改善测试的效率和有效性。<br />
+							   6,没有发现错误的测试也是有价值的，完整的测试是评定软件质量的一种方法。<br />
+							   7,另外，根据测试目的的不同，还有回归测试、压力测试、性能测试等，分别为了检验修改或优化过程是否引发新的问题、软件所能达到处理能力和是否达到预期的处理能力等。</p>
+        
+                <h2>1.1.1. 软件测试原则</h2>
+        <!--        <pre>
+                    软件测试（英语：Software Testing），描述一种用来促进鉴定软件的正确性、完整性、安全性和质量的过程。换句话说，软件测试是一种实际输出与预期输出之间的审核或者比较过程。软件测试的经典定义是：在规定的条件下对程序进行操作，以发现程序错误，衡量软件质量，并对其是否能满足设计要求进行评估的过程。
+                    <br>
+                    document.write("&lt;p&gt;This is a paragraph&lt;/p&gt;");
+                </pre>-->
+                <br />
+                <p class="tip">1,测试人员应该尽早介入，要在需求阶段就开始介入，因为最严重的错误不外乎是系统不能满足用户的需求。</p>
+                <p class="tip">2,设计测试用例时应考虑到合法的输入和不合法的输入以及各种边界条件，特殊情况下还要制造极端状态和意外状态，如网络异常中断、电源断电等，即容错测试和容灾测试。<br />
+                               3,应该充分注意测试中的群集现象。<br />
+                               4,对错误结果要进行一个确认过程。安排其他人员尝试重现问题，并且做好定位于bug定级。<br />
+                               5,制定严格的测试计划。一定要制定测试计划，并且要有指导性。测试时间安排留好buff，不要希望在极短的时间内完成一个高水平的测试<br />
+                               6,妥善保存测试计划、测试用例、出错统计和最终分析报告，为维护提供方便。<br />
+							  </p>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../js/jquery.min.js" ></script>
+<script type="text/javascript" src="../js/nicescrool.js"></script>
+<script type="text/javascript">
+    $(function(){
+
+        //美化滚动条
+        $(".result,.living-example").eq(0).niceScroll({
+            cursorcolor: "#bbb", // 改变滚动条颜色，使用16进制颜色值
+            cursorwidth: "4px", // 滚动条的宽度，单位：便素
+            cursorborder: "0px solid #e0e0e0", // CSS方式定义滚动条边框
+            cursorborderradius: "3px", // 滚动条圆角（像素）
+            autohidemode: 'false', // 隐藏滚动条的方式, 可用的值: true | // 无滚动时隐藏 "cursor" | // 隐藏 false | // 不隐藏, "leave" | // 仅在指针离开内容时隐藏"hidden" | // 一直隐藏  "scroll", // 仅在滚动时显示
+            background: "#e0e0e0", // 轨道的背景颜色
+        });
+    });
+
+</script>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>节点汇总</title>
+		<link type="text/css" rel="stylesheet" href="css/common.css">
+		<link type="text/css" rel="stylesheet" href="css/public.css">
+		<style>
+			#node{width:100%;height: auto;margin: 0 auto;}
+			/*头部 开始*/
+			#node .node-head{width:calc(100% - 20px);padding: 10px;height: 30px; line-height:30px;text-align: left; font-size: 18px; color: #ffffff;background: #36474F}
+			#node .node-head .head-logo{color: #ffffff;font-size:20px; }
+			#node .node-head .not-log-in a{color: #ffffff;margin-right: 10px;}
+			#node .node-head .not-log-in.curr{display: none}
+			#node .node-head .not-log-in a:hover{color: #26A59A;}
+			#node .node-head .log-in a{color: #ffffff;margin-right: 10px; display: none}
+			#node .node-head .log-in a.curr{display: block}
+			#node .node-head .log-in a:hover{color: #26A59A;}
+			#node .node-head .log-in img{width: 30px; height: 30px;border-radius: 50%; background: red;display:inline-block;overflow:hidden;vertical-align: middle; margin-right: 10px}
+			/*头部 结束*/
+			/*内容区 开始*/
+			#node .node-content{width: 100%;height: auto;}
+			#node .node-content .node-left{width: 200px;z-index:11;height:auto;min-height:400px;background: #273238;padding: 10px 0;position: absolute;top: 50px;left: 0;bottom: 0}
+			#node .node-content .node-left .list{line-height: 40px;text-align: left;font-size: 14px;}
+			#node .node-content .node-left .list .list-stair a{color: #ffffff;display:block;width: 160px;padding-left:10px; padding-right:30px;background: url("img/icons/up_arrow.png") no-repeat 176px center;overflow: hidden; text-overflow: ellipsis; white-space: nowrap}
+			#node .node-content .node-left .list .list-stair a:hover{background:#26A59A url("img/icons/up_arrow.png") no-repeat 176px center}
+			#node .node-content .node-left .list .list-stair a.curr{background-color:#26A59A}
+			#node .node-content .node-left .list .list-stair a.curr02{background-image:url("img/icons/down_arrow.png")}
+
+			#node .node-content .node-left .list .list-second-level{background:#36404F;width: 100%; height: auto;display: none}
+			#node .node-content .node-left .list .list-second-level a{display: block;width: 180px;padding:0 10px;color: #ffffff;overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+			#node .node-content .node-left .list-second-level a:hover{background:#4f807b; display: block; }
+			#node .node-content .node-left .list-second-level a.curr{background:#4f807b;color: #ffffff; }
+
+			/*底部 开始*/
+			#node .node-bottom{position:absolute;bottom:0px;width:100%;height: 30px; line-height:30px;text-align: center; font-size: 14px; color: #ffffff;background: #36474F}
+			/*底部 结束*/
+			/*内容区 结束*/
+			/*左侧功能区 开始*/
+			#node .node-right{width:60px;height:100%;position: fixed;top:50px;right: -80px; bottom: 0px;transition:0.5s}
+			#node .node-right.slider{right:0;transition:0.5s}
+			/*#node .node-right .more{position: absolute;top: 50%;margin-top:-40px;right: 80px;font-size: 14px;width:60px;cursor:pointer;line-height: 30px;height: 30px;background:#26A59A;color: #ffffff;text-align: center;}
+			#node .node-right .more:hover{background: #1ba59c;color: #ffffff;text-align: center;}
+			#node .node-right .more.curr{display: block}*/
+			#node .node-right .more{position: absolute;top: 50%;margin-top:-40px;right: 80px;font-size: 14px;cursor:pointer;}
+			#node .node-right .more.curr{display: block}
+			#node .node-right .node-more{position: absolute;top:0px;right: 0px; bottom: 80px;display: block;background:#e8e8e8;}
+			#node .node-right .node-more a{display: block;width:80px;height: 60px;color: #666666;line-height: 60px;text-align: center}
+			#node .node-right .node-more a:hover{background:#4f807b;color: #ffffff;}
+
+			/*回到顶部 开始*/
+			#node .node-right .node-more .go-top{position: fixed;}
+			/*回到顶部 结束*/
+			/*左侧功能区 结束*/
+		</style>
+	</head>
+	<body>
+	<div id="node" class="clearfix">
+		<!--头部 开始-->
+		<div class="node-head clearfix">
+			<div class="head-logo fl">节点管理系统</div>
+			<div class="not-log-in fr"><a href="javascript:;">登录</a><a href="javascript:;">注册</a></div>
+			<div class="log-in fr"><a href="javascript:;"><img src="">豆豆</a></div>
+		</div>
+		<!--头部 结束-->
+		<!--内容区 开始-->
+		<div class="node-content clearfix">
+			<div class="node-left">
+				<div class="list">
+					<div class="list-stair">
+						<a href="javascript:;" target="">1.欢迎进入软件测试的世界</a>
+					</div>
+					<div class="list-second-level">
+						<a href="Test/html1.html" target="mainFrame" >1.1.什么是软件测试</a>
+						<a href="Test/html2.html" target="mainFrame" >1.2.软件测试发展历史</a>
+						<a href="Test/html3.html" target="mainFrame" >1.3.软件测试中专用名词解释</a>
+						<a href="Test/html4.html" target="mainFrame" >1.4.软件测试过程中经常使用的工具及平台</a>
+					</div>
+				</div>
+				<div class="list">
+					<div class="list-stair">
+						<a href="javascript:;">2.功能测试</a>
+					</div>
+					<div class="list-second-level">
+						<a href="FunctionalTest/FunctionalTestOne.html" target="mainFrame">2.1.功能测试用例基本结构规范</a>
+						<a href="FunctionalTest/FunctionalTestTwo.html" target="mainFrame">2.2.web功能测试_页面控件模型</a>
+						<a href="FunctionalTest/FunctionalTestThree.html" target="mainFrame">2.3.web功能测试_页面动作模型</a>
+						<a href="FunctionalTest/FunctionalTestFour.html" target="mainFrame">2.4.web功能测试_基本操作模型</a>
+						<a href="FunctionalTest/FunctionalTestFive.html" target="mainFrame">2.5.app与web测试的主要区别</a>
+					</div>
+				</div>
+				<div class="list">
+					<div class="list-stair">
+						<a href="javascript:;">3.MySQL</a>
+					</div>
+					<div class="list-second-level">
+						<a href="更改链接.html" target="mainFrame">更改链接</a>
+						<a href="mysql/MysqlcreateTable.html" target="mainFrame">3.1.MySQL 创建数据表</a>
+						<a href="mysql/MysqldeleteTable.html" target="mainFrame">3.2.MySQL 删除数据表</a>
+						<a href="mysql/Mysqlinsert.html" target="mainFrame">3.3.MySQL 插入数据</a>
+						<a href="mysql/Mysqlselect.html" target="mainFrame">3.4.MySQL 查询数据</a>
+						<a href="mysql/Mysqlwhere.html" target="mainFrame">3.5.MySQL WHERE 子句</a>
+						<a href="mysql/Mysqlupdate.html" target="mainFrame">3.6.MySQL UPDATE 查询</a>
+						<a href="mysql/Mysqldelete.html" target="mainFrame">3.7.MySQL DELETE 语句</a>
+						<a href="mysql/Mysqllike.html" target="mainFrame">3.8.MySQL LIKE 子句</a>
+						<a href="mysql/Mysqlunion.html" target="mainFrame">3.9.MySQL UNION 操作符</a>
+						<a href="mysql/Mysqlorder.html" target="mainFrame">3.10.MySQL 排序</a>
+						<a href="mysql/Mysqlgroup.html" target="mainFrame">3.11.MySQL GROUP BY 语句</a>
+						<a href="mysql/Mysqljoin.html" target="mainFrame">3.12.Mysql 连接的使用</a>
+						<a href="mysql/Mysqlnull.html" target="mainFrame">3.13.MySQL NULL 值处理</a>
+						<a href="mysql/Mysqlregular.html" target="mainFrame">3.14.MySQL 正则表达式</a>
+						<a href="mysql/MysqlTheTransaction.html" target="mainFrame">3.15.MySQL 事务</a>
+						<a href="mysql/MysqlALTER.html" target="mainFrame">3.16. MySQL ALTER命令</a>
+						<a href="mysql/MysqTheindex.html" target="mainFrame">3.17.MySQL 索引</a>
+					</div>
+				</div>
+				<div class="list">
+					<div class="list-stair">
+						<a href="javascript:;">4.Jmeter</a>
+					</div>
+					<div class="list-second-level">
+						<a href="../练习页面/地图.html" target="mainFrame">4.1.Jmeter基本结构</a>
+						<a href="../练习页面/地图定位.html" target="mainFrame">地图定位</a>
+						<a href="../练习页面/图片转为黑白色.html" target="mainFrame">透明效果</a>
+						<a href="../练习页面/所有滤镜实例.html" target="mainFrame">所有滤镜实例</a>
+						<a href="../练习页面/下拉例子.html" target="mainFrame">下拉例子</a>
+						<a href="../练习页面/下拉例子02.html" target="mainFrame">下拉例子02</a>
+						<a href="../练习页面/媒体查询.html" target="mainFrame">媒体查询</a>
+						<a href="../练习页面/百度云.html" target="mainFrame">百度云</a>
+						<a href="../练习页面/购物车.html" target="mainFrame">购物车</a>
+						<a href="../练习页面/评价单点星星.html" target="mainFrame">评价单星星</a>
+						<a href="../练习页面/评价单星星02.html" target="mainFrame">评价单星星02</a>
+					</div>
+				</div>
+				<div class="list">
+					<div class="list-stair">
+						<a href="javascript:;">网页</a>
+					</div>
+					<div class="list-second-level">
+						<a href="../猫眼/index.html" target="mainFrame">猫眼</a>
+						<a href="../哥哥/内页.html" target="mainFrame">内页</a>
+						<a href="../bootstrap-3.3.7-dist/demo01.html" target="mainFrame">bootstrap（demo）</a>
+						<a href="../动画/01动画按钮.html" target="mainFrame">01动画按钮</a>
+						<a href="../富文本编辑器/index.html" target="mainFrame">富文本编辑器</a>
+						<a href="../背景锁定/index.html" target="mainFrame">背景锁定</a>
+						<a href="../页面动画-距离顶部/index.html" target="mainFrame">页面动画-距离顶部</a>
+						<a href="../bs-text/index.html" target="mainFrame">bootstrap例子</a>
+						<a href="../练习页面/购物车.html" target="mainFrame">购物车</a>
+						<a href="../效果例子/放设性效果.html" target="mainFrame">放设性效果</a>
+						<a href="../效果例子/机器猫头像.html" target="mainFrame">机器猫头像</a>
+						<a href="../效果例子/流行滑过星空.html" target="mainFrame">流行滑过星空</a>
+						<a href="../效果例子/雪花效果.html" target="mainFrame">雪花效果</a>
+						<a href="../效果例子/3D炫酷canvas.html" target="mainFrame">3D炫酷canvas</a>
+						<a href="../效果例子/3D波浪墙.html" target="mainFrame">3D波浪墙</a>
+						<a href="../效果例子/H5小游戏.html" target="mainFrame">H5小游戏</a>
+						<a href="../效果例子/jquery实现新婚快乐.html" target="mainFrame">jquery实现新婚快乐</a>
+						<a href="../效果例子/卷轴动画.html" target="mainFrame">卷轴动画</a>
+						<a href="../效果例子/变色龙.html" target="mainFrame">变色龙</a>
+						<a href="../效果例子/图片酷炫离子动画.html" target="mainFrame">图片酷炫离子动画</a>
+						<a href="../效果例子/天空星.html" target="mainFrame">天空星</a>
+						<a href="../效果例子/导航动画.html" target="mainFrame">导航动画</a>
+						<a href="../效果例子/弹窗消失动画.html" target="mainFrame">弹窗消失动画</a>
+						<a href="../效果例子/彩色火焰球弹跳.html" target="mainFrame">彩色火焰球弹跳</a>
+						<a href="../效果例子/打印机字体效果.html" target="mainFrame">打印机字体效果</a>
+						<a href="../效果例子/文字漂浮.html" target="mainFrame">文字漂浮</a>
+						<a href="../效果例子/文字特效.html" target="mainFrame">文字特效</a>
+						<a href="../效果例子/新年快乐离子烟花.html" target="mainFrame">新年快乐离子烟花</a>
+						<a href="../效果例子/水滴.html" target="mainFrame">水滴</a>
+						<a href="../效果例子/河流时间轴.html" target="mainFrame">河流时间轴</a>
+						<a href="../效果例子/流行滑过星空.html" target="mainFrame">流行滑过星空</a>
+						<a href="../效果例子/浮层跟着图片.html" target="mainFrame">浮层跟着图片</a>
+						<a href="../效果例子/漂亮雨滴.html" target="mainFrame">漂亮雨滴</a>
+						<a href="../效果例子/漫画树.html" target="mainFrame">漫画树</a>
+						<a href="../效果例子/烟花.html" target="mainFrame">烟花</a>
+						<a href="../效果例子/离子星空.html" target="mainFrame">离子星空</a>
+						<a href="../效果例子/自动翻牌.html" target="mainFrame">自动翻牌</a>
+						<a href="../效果例子/花瓣表白.html" target="mainFrame">花瓣表白</a>
+						<a href="../效果例子/蒲公英.html" target="mainFrame">蒲公英</a>
+						<a href="../效果例子/蝴蝶效果.html" target="mainFrame">蝴蝶效果</a>
+						<a href="../效果例子/贪吃蛇.html" target="mainFrame">贪吃蛇</a>
+						<a href="../效果例子/输入文字离子动画.html" target="mainFrame">输入文字离子动画</a>
+						<a href="../效果例子/雪花.html" target="mainFrame">雪花</a>
+						<a href="../效果例子/雪花效果.html" target="mainFrame">雪花效果</a>
+						<a href="../效果例子/鲨鱼游动.html" target="mainFrame">鲨鱼游动</a>
+					</div>
+				</div>
+				<div class="list">
+					<div class="list-stair">
+						<a href="javascript:;">基础 JavaScript 实例</a>
+					</div>
+					<div class="list-second-level">
+						<a href="../js示例/基础 JavaScript 实例/用JavaScript输出文本.html" target="mainFrame">用JavaScript输出文本</a>
+						<a href="../js示例/基础 JavaScript 实例/用JavaScript改变HTML元素.html" target="mainFrame">用JavaScript改变HTML元素</a>
+						<a href="../js示例/基础 JavaScript 实例/一个外部JavaScript.html" target="mainFrame">一个外部JavaScript</a>
+
+					</div>
+				</div>
+			</div>
+			<div id="frame-main">
+				<iframe frameborder="no" name="mainFrame" id="mainFrame" scrolling="auto" src="简介.html" width="100%" height="100%">
+					您的浏览器不支持嵌入式框架，或者当前配置为不显示嵌入式框架。
+				</iframe>
+			</div>
+		</div>
+		<!--内容区 结束-->
+		<!--底部 开始-->
+		<div class="node-bottom">&copy;版权所有权归豆豆所有</div>
+		<!--底部 结束-->
+		<!--右侧工具 开始-->
+		<div class="node-right">
+			<div class="more"><img src="img/node_more01.png"></div>
+			<!--<div class="more"> 展开更多</div>-->
+			<div class="node-more">
+				<a href="javascript:;"> 页面展示</a>
+				<a href="javascript:;" id="code"> 查看代码</a>
+				<a href="javascript:;"> 后台管理</a>
+				<a href="javascript:;"> 权限配置</a>
+				<a href="javascript:;" class="go-top"> 回到顶部</a>
+			</div>
+		</div>
+		<!--右侧工具 结束-->
+	</div>
+	</body>
+    <script src="js/jquery.min.js"></script>
+	<script src="js/nicescrool.js"></script>
+	<script type="text/javascript" src="js/layer/layer.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript">
+	$(function () {
+        //源代码 弹框
+        $('#code').on('click',function(){
+            topWin.JLayer.openFrame({
+                id:'addCheckLibrary',
+                url:'源代码.html',
+                width:750,
+                height:560,
+                title:"源代码"
+            });
+        });
+        //左侧切换
+        $(document).on("click",".list .list-stair>a",function(){
+           $(this).addClass("curr").parent().siblings().removeClass("curr");
+        	$(this).toggleClass("curr02");
+            $(this).parents().siblings().find("a").removeClass("curr");
+            $(this).parent().siblings().toggle();
+        });
+//        二级切换选择
+        $(document).on("click",".list .list-second-level a",function(){
+            $(this).toggleClass("curr").siblings().removeClass("curr");
+            $(this).parents().siblings().find("a").removeClass("curr");
+        });
+        //左侧美化条
+        $(".node-left").niceScroll({
+            cursorcolor: "#bbb", // 改变滚动条颜色，使用16进制颜色值
+            cursorwidth: "4px", // 滚动条的宽度，单位：便素
+            cursorborder: "0px solid #e0e0e0", // CSS方式定义滚动条边框
+            cursorborderradius: "3px", // 滚动条圆角（像素）
+            autohidemode: 'false', // 隐藏滚动条的方式, 可用的值: true | // 无滚动时隐藏 "cursor" | // 隐藏 false | // 不隐藏, "leave" | // 仅在指针离开内容时隐藏"hidden" | // 一直隐藏  "scroll", // 仅在滚动时显示
+            background: "#e0e0e0", // 轨道的背景颜色
+        });
+
+//        登录和未登录状态判断
+/*
+       /$(".node-head").find(".not-log-in").click(function(){
+            if($(this).hasClass("curr")){
+                $(this).addClass("curr");
+                $(this).siblings().find("a").addClass("curr")
+            }else{
+                $(this).removeClass("curr");
+                $(this).addClass("curr");
+                $(this).siblings().find("a").removeClass("curr")
+            }
+        });*/
+        $(".node-head").find(".not-log-in").click(function(){
+            if($(this).hasClass("curr")){
+                $(this).show("");
+                $(this).siblings().find("a").hide()
+            }else{
+                $(this).hide();
+                $(this).siblings().find("a").show()
+            }
+        });
+//        右侧更多
+       $(".node-right").find(".more").click(function(){
+           $(this).parents().toggleClass('slider');
+        });
+      /*  $(".node-right").find(".more").hover(function(){
+			 if($(this).hasClass("curr")){
+			 $(this).toggle();
+			 $(this).siblings().hide()
+			 }else{
+			 $(this).toggle();
+			 $(this).siblings().show()
+			 }
+         $(this).siblings().toggle(500);
+        });*/
+//        更多里面选中
+        $(".node-right").on("click",".node-more a",function(){
+            $(this).toggleClass("curr").siblings().removeClass("curr");
+            $(this).parents().siblings().find("a").removeClass("curr");
+        });
+
+//        回到顶部 开始
+        $(function(){
+            //当滚动条的位置处于距顶部100像素以下时，跳转链接出现，否则消失
+            $(function () {
+                $(window).scroll(function(){
+                    if ($(window).scrollTop()>100){
+                        $(".go-top").css({'top':'50px'});
+                    }
+                });
+                //当点击跳转链接后，回到页面顶部位置
+                $(".go-top").click(function(){
+                    if ($('.node-content').scrollTop()) {
+                        $('.node-content').animate({ scrollTop: 0 }, 100);//动画效果
+						alert(0);
+                        return false;
+                    }
+                    $('body').animate({ scrollTop: 0 }, 100);
+                    return false;
+                });
+            });
+        });
+
+
+    })
+</script>
+</html>

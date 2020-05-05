@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.4.web功能测试_基本操作模型</title>
+    <link type="text/css" rel="stylesheet" href="../css/common.css">
+    <link type="text/css" rel="stylesheet" href="../css/public.css">
+    <style>
+    </style>
+</head>
+<body>
+<div id="page-node-content">
+    <div class="content-tit clearfix">
+       <a href="简介.html" target="mainFrame" >首页</a>
+       &gt;
+       <a href="html4.html" target="mainFrame" >2.4.web功能测试_基本操作模型</a>
+    </div>
+    <div class="content-content clearfix">
+        <div class="living-example fl">
+                <h2>2.4.web功能测试_基本操作模型</h2>
+                <h3>2.4.1.单个查询操作</h3>
+                   <!--<pre>
+                    document.write("&lt;p&gt;This is a paragraph&lt;/p&gt;");
+                   </pre>-->
+                <p class="tip">分别对单条件进行精确查询</p>
+                <p class="tip">输入长度的校验，输入允许的最长值进行查询，是否支持</p>
+                <p class="tip">两个查询条件是否是2选1，来回选择是否出现页面错误</p>
+                <p class="tip">输入字符</p>
+                <p class="tip">输入特殊字符</p>
+                <p class="tip">输入汉字</p>
+                <p class="tip">输入数字</p>
+                <p class="tip">输入超长字符</p>
+                <p class="tip">输入全角字符</p>
+                <p class="tip">输入单引号</p>
+                <p class="tip">输入单引号引起来的数据</p>
+                <p class="tip">输入双引号</p>
+                <p class="tip">输入双引号引起来的数据</p>
+                <p class="tip">查询结果按照什么顺序排序</p>
+                <p class="tip">查询结果是否根据字段显示排序功能</p>
+                <p class="tip">查询结果是否有分页，如果有，每页最多多少记录</p>
+                <p class="tip">查询结果是否匹配</p>
+                <p class="tip">查询结果是否与数据库一致</p>
+                <p class="tip">查询结果是精确查询还是模糊查询</p>
+                <p class="tip">输入框大小、文字大小是否合适</p>
+                <p class="tip">查询处理时间是否能接受</p>
+                <p class="tip">数据库存在大量数据时，查询处理时间是否能接受</p>
+                <p class="tip">多个用户同时查询时，输入相同或不同的条件查询后系统响应是否及时</p>
+                <br />
+                <h3>2.4.2.级联查询操作</h3>
+                <p class="tip">所有条件输入空查询 </p>
+                <p class="tip">只输入一个关键条件查询 </p>
+                <p class="tip">随机组合条件查询</p>
+                <p class="tip">输入所有关键条件查询</p>
+                <p class="tip">所有条件都输入查询</p>
+                <p class="tip">查询结果按什么顺序排序</p>
+                <p class="tip">查询结果是否根据字段显示</p>
+                <p class="tip">查询结果是否与数据库一致 </p>
+                <br />
+                <h3>2.4.3.新增操作</h3>
+                <p class="tip">初始化数据正确性</p>
+                <p class="tip">进入功能后未修改任何数据项运行新增功能</p>
+                <p class="tip">清空功能中所有可删除的数据项后运行新增功能</p>
+                <p class="tip">录满功能中所有数据</p>
+                <p class="tip">服务器磁盘空间不足，不能新增</p>
+                <p class="tip">主键同名，唯一性验证</p>
+                <p class="tip">创建时间以服务器的时间为准</p>
+                <p class="tip">是否在任何情况下，都可以取消保存</p>
+                <p class="tip">如果存在重置功能，重置后是否正常保存</p>
+                <p class="tip">提交成功后有返回结果，成功失败页面或实时刷新列表</p>
+                <p class="tip">新增提交时间如果长，应出现进度显示表</p>
+                <p class="tip">新增的数据是否与数据库一致</p>
+                <p class="tip">系统是否有提供数据回显, 那么回显数据与新增数据是一致的</p>
+                <p class="tip">如果新增数据后有返回到列表, 则一般是新增的数据排在首页首行</p>
+                <br />
+                <h3>2.4.4.修改操作</h3>
+                <p class="tip">修改一条记录</p>
+                <p class="tip">是否支持同时修改多条记录</p>
+                <p class="tip">多用户同时修改同一记录</p>
+                <p class="tip">点击“取消”或“返回”是否给予提示</p>
+                <p class="tip">提交成功后有返回结果，成功失败页面或实时刷新列表</p>
+                <p class="tip">修改提交时间如果长，应出现进度显示</p>
+                <p class="tip">修改的数据是否与数据库一致</p>
+                <br />
+
+                <h3>2.4.5.删除操作</h3>
+                <p class="tip">删除一条记录</p>
+                <p class="tip">是否支持同时删除多条记录</p>
+                <p class="tip">一个用户修改，一个用户删除同样的记录</p>
+                <p class="tip">无选择记录时删除是否控制</p>
+                <p class="tip">提交成功后有返回结果，成功失败页面或实时刷新列表</p>
+                <p class="tip">如果节点没有被其它功能关联，可以删除；反之不行</p>
+                <p class="tip">级联删除是否成功</p>
+                <br />
+                <h3>2.4.6.数据导入操作</h3>
+                <p class="tip">是否完成数据正常导入功能</p>
+                <p class="tip">导入文件的部分数据异常进行导入</p>
+                <p class="tip">导入文件的全部数据异常进行导入</p>
+                <p class="tip">导入文件的关键字段值在数据中不存在进行导入</p>
+                <p class="tip">导入文件的数据格式不符合进行导入</p>
+                <p class="tip">数据导入后列表中的显示是否正确</p>
+                <p class="tip">数据导入后在数据库中的显示是否正确</p>
+                <br />
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../js/jquery.min.js" ></script>
+<script type="text/javascript" src="../js/nicescrool.js"></script>
+<script type="text/javascript">
+    $(function(){
+
+        //美化滚动条
+        $(".result,.living-example").eq(0).niceScroll({
+            cursorcolor: "#bbb", // 改变滚动条颜色，使用16进制颜色值
+            cursorwidth: "4px", // 滚动条的宽度，单位：便素
+            cursorborder: "0px solid #e0e0e0", // CSS方式定义滚动条边框
+            cursorborderradius: "3px", // 滚动条圆角（像素）
+            autohidemode: 'false', // 隐藏滚动条的方式, 可用的值: true | // 无滚动时隐藏 "cursor" | // 隐藏 false | // 不隐藏, "leave" | // 仅在指针离开内容时隐藏"hidden" | // 一直隐藏  "scroll", // 仅在滚动时显示
+            background: "#e0e0e0", // 轨道的背景颜色
+        });
+    });
+
+</script>
+</html>

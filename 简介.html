@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简介</title>
+    <link type="text/css" rel="stylesheet" href="css/common.css">
+    <link type="text/css" rel="stylesheet" href="css/public.css">
+    <style>
+        .content-content .stair{font-size: 20px; color: #333333; line-height: 40px;}
+        .content-content .second-level{font-size: 18px; color: #666666;line-height: 30px;margin-top: 20px;}
+    </style>
+</head>
+<body>
+<div id="page-node-content">
+    <div class="content-tit clearfix">
+        <a href="简介.html" target="mainFrame" >首页</a>
+        &gt;
+        <a href="简介.html" target="mainFrame" >简介</a>
+    </div>
+    <div class="content-content">
+        <div class="stair">JavaScript 是属于网络的脚本语言！<br>
+            JavaScript 被数百万计的网页用来改进设计、验证表单、检测浏览器、创建cookies，以及更多的应用。<br>
+            JavaScript 是因特网上最流行的脚本语言。<br>
+            JavaScript 很容易使用！你一定会喜欢它的！<br>
+        </div>
+        <div class="second-level">
+            JavaScript 是脚本语言<br>
+            JavaScript 是一种轻量级的编程语言。<br>
+            JavaScript 是可插入 HTML 页面的编程代码。<br>
+            JavaScript 插入 HTML 页面后，可由所有的现代浏览器执行。<br>
+            JavaScript 很容易学习。<br>
+        </div>
+       <h2>开始学习吧！</h2>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="js/jquery.min.js" ></script>
+<script type="text/javascript" src="js/nicescrool.js"></script>
+<script type="text/javascript">
+    $(function(){
+        //美化滚动条
+        $(".content-content").eq(0).niceScroll({
+            cursorcolor: "#bbb", // 改变滚动条颜色，使用16进制颜色值
+            cursorwidth: "4px", // 滚动条的宽度，单位：便素
+            cursorborder: "0px solid #e0e0e0", // CSS方式定义滚动条边框
+            cursorborderradius: "3px", // 滚动条圆角（像素）
+            autohidemode: 'false', // 隐藏滚动条的方式, 可用的值: true | // 无滚动时隐藏 "cursor" | // 隐藏 false | // 不隐藏, "leave" | // 仅在指针离开内容时隐藏"hidden" | // 一直隐藏  "scroll", // 仅在滚动时显示
+            background: "#e0e0e0", // 轨道的背景颜色
+        });
+    });
+
+</script>
+</html>

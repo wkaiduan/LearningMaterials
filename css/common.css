@@ -1,0 +1,23 @@
+html { border: 0px;}
+body { background: #fff;}
+body, div, th, td { margin: 0px; padding: 0px; border: 0px; font-family: 微软雅黑,Microsoft yahei,Arial,Verdana,Tahoma,sans-serif; font-size: 12px; }
+input, select, textarea {outline: none;box-sizing: border-box; margin: 0px; padding: 0px; font-family: 微软雅黑,Microsoft yahei,Arial,Verdana,Tahoma,sans-serif; font-size: 12px; }
+form, img, dl, dt, dd, iframe { margin: 0px; padding: 0px; border: 0px; }
+ul, li { margin: 0px; padding: 0px; border: 0px; list-style-type: none; list-style-position: outside; }
+a, input,select,button{ outline: none;box-shadow: none; }
+a{text-decoration:none;cursor:pointer;}
+a:hover{text-decoration:none;cursor:pointer;}
+
+.fl { float: left; }
+.fr { float: right;}
+.clear { clear: both;}
+.clearfix:after{content:"";display:block;clear: both;}
+
+/*新加公用样式  开始*/
+ul,ol,dl,ul li,ol li,dl,dt,dd{list-style:none;}
+input[type="text"],input[type="password"],input[type="button"]{padding:0px 10px;outline: none;}
+textarea{padding:0 5px;outline: none;}
+textarea:focus{color:#000;}
+button{cursor:pointer;border:0;font-family: "微软雅黑";}
+i,em,cite{font-style: normal; }
+table{border-collapse: collapse;border-spacing: 0;}

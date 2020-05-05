@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.2.web功能测试_页面控件模型</title>
+    <link type="text/css" rel="stylesheet" href="../css/common.css">
+    <link type="text/css" rel="stylesheet" href="../css/public.css">
+    <style>
+    </style>
+</head>
+<body>
+<div id="page-node-content">
+    <div class="content-tit clearfix">
+       <a href="简介.html" target="mainFrame" >首页</a>
+       &gt;
+       <a href="html4.html" target="mainFrame" >2.2.web功能测试_页面控件模型</a>
+    </div>
+    <div class="content-content clearfix">
+        <div class="living-example fl">
+                <h2>2.2.web功能测试_页面控件模型</h2>
+                <h3>2.2.1.普通文本输入框控件</h3>
+                   <!--<pre>
+                    document.write("&lt;p&gt;This is a paragraph&lt;/p&gt;");
+                   </pre>-->
+                <p class="tip">校验为空</p>
+                <p class="tip">校验等于最大值-1长度</p>
+                <p class="tip">校验等于最小值-1长度</p>
+                <p class="tip">校验对齐方式</p>
+                <p class="tip">校验前空格</p>
+                <p class="tip">校验后空格</p>
+                <p class="tip">校验中间空格</p>
+                <p class="tip">校验等于最大值长度</p>
+                <p class="tip">校验等于最大值+1长度</p>
+                <p class="tip">校验等于最小值长度</p>
+                <p class="tip">校验是否禁用HTML代码</p>
+                <p class="tip">校验高危字敏感字过滤</p>
+                <p class="tip">校验特殊字符</p>
+                <br />
+                <h3>2.2.2.单选下拉选择框控件</h3>
+                <p class="tip">校验默认选项</p>
+                <p class="tip">校验刷新页面</p>
+                <p class="tip">校验对齐</p>
+                <p class="tip">校验滚动条</p>
+                <p class="tip">校验为空</p>
+                <p class="tip">校验内容长度</p>
+                <p class="tip">校验排序</p>
+                <br />
+                <h3>2.2.3.时间选择框控件</h3>
+                <p class="tip">校验支持为空</p>
+                <p class="tip">校验不支持为空</p>
+                <p class="tip">包装日历组件</p>
+                <p class="tip">校验显示格式</p>
+                <p class="tip">校验支持全角字符</p>
+                <p class="tip">校验包装日历支持手工输入</p>
+                <p class="tip">校验默认日期</p>
+                <p class="tip">校验输入日期中带有特殊符号</p>
+                <p class="tip">校验输入小时中带有特殊符号</p>
+                <p class="tip">校验输入分钟中带有特殊符号</p>
+                <p class="tip">校验输入秒中带有特殊符号</p>
+                <p class="tip">校验输入年份中带字母</p>
+                <p class="tip">校验输入月份中带字母</p>
+                <p class="tip">校验输入日期中带字母</p>
+                <p class="tip">校验输入秒中带字母</p>
+                <p class="tip">校验输入年份中带汉字</p>
+                <p class="tip">校验输入月份中带汉字</p>
+                <p class="tip">校验输入日期中带汉字</p>
+                <p class="tip">校验输入小时中带汉字</p>
+                <p class="tip">校验输入分钟中带汉字</p>
+                <p class="tip">校验输入秒中带汉字</p>
+                <p class="tip">校验修改日期字段正确生效</p>
+                <p class="tip">校验修改小时字段正确生效</p>
+                <p class="tip">校验修改分钟字段正确生效</p>
+                <p class="tip">校验修改秒字段正确生效</p>
+                <br />
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../js/jquery.min.js" ></script>
+<script type="text/javascript" src="../js/nicescrool.js"></script>
+<script type="text/javascript">
+    $(function(){
+
+        //美化滚动条
+        $(".result,.living-example").eq(0).niceScroll({
+            cursorcolor: "#bbb", // 改变滚动条颜色，使用16进制颜色值
+            cursorwidth: "4px", // 滚动条的宽度，单位：便素
+            cursorborder: "0px solid #e0e0e0", // CSS方式定义滚动条边框
+            cursorborderradius: "3px", // 滚动条圆角（像素）
+            autohidemode: 'false', // 隐藏滚动条的方式, 可用的值: true | // 无滚动时隐藏 "cursor" | // 隐藏 false | // 不隐藏, "leave" | // 仅在指针离开内容时隐藏"hidden" | // 一直隐藏  "scroll", // 仅在滚动时显示
+            background: "#e0e0e0", // 轨道的背景颜色
+        });
+    });
+
+</script>
+</html>

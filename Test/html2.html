@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1.2.软件测试发展历史</title>
+    <link type="text/css" rel="stylesheet" href="../css/common.css">
+    <link type="text/css" rel="stylesheet" href="../css/public.css">
+    <style>
+    </style>
+</head>
+<body>
+<div id="page-node-content">
+    <div class="content-tit clearfix">
+       <a href="简介.html" target="mainFrame" >首页</a>
+       &gt;
+       <a href="../Test/html2.html" target="mainFrame" >1.2.软件测试发展历史</a>
+    </div>
+    <div class="content-content clearfix">
+        <div class="living-example fl">
+                <h2>1.2.软件测试发展历史</h2>
+                <h3>1.2.1. 1957年之前——调试为主(Debugging Oriented)</h3>
+        <!--        <pre>
+                    document.write("&lt;p&gt;This is a paragraph&lt;/p&gt;");
+                    </pre>-->
+                <p class="tip">20世纪50年代，计算机刚诞生不久，只有科学家级别的人才会去编程，需求和程序本身也远远没有现在这么复杂多变，相当于开发人员一人承担需求分析，设计，开发，测试等所有工作，当然也不会有人去区分调试和测试。</p>
+                <br />
+               
+                <h3>1.2.2. 1957–1978——证明为主(Demonstration Oriented)</h3>
+        <!--        <pre>
+                    document.write("&lt;p&gt;This is a paragraph&lt;/p&gt;");
+                    </pre>-->
+                <p class="tip">1957年，Charles Baker在他的一本书中对调试和测试进行了区分Debug和Testing：</p>
+                <br />
+                <p class="tip">调试(Debug)：确保程序做了程序员想它做的事情</p>
+                <p class="tip">测试(Testing)：确保程序解决了它该解决的问题</p>
+                <br />
+                
+                <h3>1.2.3. 1979–1982——破坏为主(Destruction Oriented)</h3>
+                <p class="tip">1979年，《软件测试的艺术》 (The Art of Software Testing)第一版问世，这本书是测试界的经典之作。书中给出了软件测试的经典定义： 测试是为发现错误而执行程序的过程。</p>
+                <br />
+               
+                <h3>1.2.4. 1983–1987——评估为主(Evaluation Oriented)</h3>
+                <p class="tip">1983年，美国国家标准局(National Bureau of Standards)发布“Guideline for Lifecycle Validation, Verification and Testing of Computer Software”，也就是我们常说的VV&T。VV&T提出了测试界很有名的两个名词：验证(Verification)和确认(Validation) 人们提出了在软件生命周期中使用分析，评审，测试来评估产品的理论。软件测试工程在这个时期得到了快速的发展</p>
+                <br />
+                
+                 <h3>1.2.5. 1988–至今——预防为主(Prevention Oriented)</h3>
+                <p class="tip">预防为主是当下软件测试的主流思想之一。STEP(Systematic Test and Evaluation Process)是最早的一个以预防为主的生命周期模型，STEP认为测试与开发是并行的，整个测试的生命周期也是由计划，分析，设计，开发，执行和维护组成，也就是说，测试不是在编码完成后才开始介入，而是贯穿于整个软件生命周期。我们都知道，没有100%完美的软件，零缺陷是不可能的，所以我们要做的是：尽量早的介入，尽量早的发现这些明显的或隐藏的bug，发现得越早，修复起来的成本越低，产生的风险也越小。</p>
+                <br />
+                
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../js/jquery.min.js" ></script>
+<script type="text/javascript" src="../js/nicescrool.js"></script>
+<script type="text/javascript">
+    $(function(){
+
+        //美化滚动条
+        $(".result,.living-example").eq(0).niceScroll({
+            cursorcolor: "#bbb", // 改变滚动条颜色，使用16进制颜色值
+            cursorwidth: "4px", // 滚动条的宽度，单位：便素
+            cursorborder: "0px solid #e0e0e0", // CSS方式定义滚动条边框
+            cursorborderradius: "3px", // 滚动条圆角（像素）
+            autohidemode: 'false', // 隐藏滚动条的方式, 可用的值: true | // 无滚动时隐藏 "cursor" | // 隐藏 false | // 不隐藏, "leave" | // 仅在指针离开内容时隐藏"hidden" | // 一直隐藏  "scroll", // 仅在滚动时显示
+            background: "#e0e0e0", // 轨道的背景颜色
+        });
+    });
+
+</script>
+</html>

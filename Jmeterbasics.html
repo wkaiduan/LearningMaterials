@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3.14.MySQL 正则表达式</title>
+     <link type="text/css" rel="stylesheet" href="css/common.css">
+    <link type="text/css" rel="stylesheet" href="css/public.css">
+    <style type="text/css">
+    body{overflow-y:scroll;font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif;background:#f4f4f4;padding:0;margin:0;}
+	h1{font-size:31px;line-height:32px;font-weight:normal;margin-bottom:25px;}
+    a,a:hover{border:none;text-decoration:none;}
+    img,a img{border:none;}
+    pre{overflow-x:scroll;background:#ffffff;border:1px solid #cecece;padding:10px;}
+	.clear{clear:both;}
+	.zoomed > .container{-webkit-filter:blur(3px);filter:blur(3px);}
+	.container{width:860px;margin:20px auto;}
+	.gallery{list-style-type:none;float:left;}
+	.gallery li{float:left;margin:10px; width:80px; height:80px;}
+	.gallery li:nth-child(6n){padding-right:0;}
+	.gallery li a,.gallery li img{float:left;}
+</style>
+<!--图片弹出层样式 必要样式-->
+  <link rel="stylesheet"  href="css/zoom.css" media="all" />
+</head>
+<body>
+<div id="page-node-content">
+    <div class="content-tit clearfix">
+       <a href="简介.html" target="mainFrame" >首页</a>
+       &gt;
+       <a href="html4.html" target="mainFrame" >3.14.MySQL 正则表达式</a>
+    </div>
+    <div class="content-content clearfix">
+        <div class="living-example fl">
+                <h2>3.14.MySQL 正则表达式</h2>
+                <h3>在前面的章节我们已经了解到MySQL可以通过 LIKE …% 来进行模糊匹配。 MySQL 同样也支持其他正则表达式的匹配， MySQL中使用 REGEXP 操作符来进行正则表达式匹配。 简单，因为MySQL的正则表达式匹配与这些脚本的类似。 下表中的正则模式可应用于 REGEXP 操作符中。</h3>
+               <ul class="gallery">
+	    			
+				<p class="tip"><li><a href="img/re.png"><img src="img/re.png" style="width:590px; height:460px;"/></a></li></p>
+	    		</ul>
+	    		<div class="clear"></div>
+               
+               <h3 style="margin-top: 380px;">了解以上的正则需求后，我们就可以根据自己的需求来编写带有正则表达式的SQL语句。以下我们将列出几个小实例(表名：person_tbl )来加深我们的理解： 查找name字段中以’st’为开头的所有数据：</h3>
+                <pre style="margin-top:20px;">
+                 mysql> SELECT name FROM person_tbl WHERE name REGEXP '^st';
+                </pre>
+                <h3 style="margin-top: 20px;">查找name字段中以’ok’为结尾的所有数据：</h3>
+                <pre style="margin-top:20px;">
+				mysql> SELECT name FROM person_tbl WHERE name REGEXP 'ok$';
+                </pre>
+                <h3 style="margin-top: 20px;">查找name字段中包含’mar’字符串的所有数据：</h3>
+                <pre style="margin-top:20px;">
+				mysql> SELECT name FROM person_tbl WHERE name REGEXP 'mar';
+                </pre>
+                
+                <h3 style="margin-top: 20px;">查找name字段中以元音字符开头或以’ok’字符串结尾的所有数据：</h3>
+                <pre style="margin-top:20px;">
+				mysql> SELECT name FROM person_tbl WHERE name REGEXP '^[aeiou]|ok$';
+                </pre>
+                
+              	<br />
+              
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/zoom.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js" ></script>
+<script type="text/javascript" src="js/nicescrool.js"></script>
+<script type="text/javascript">
+    $(function(){
+
+        //美化滚动条
+        $(".result,.living-example").eq(0).niceScroll({
+            cursorcolor: "#bbb", // 改变滚动条颜色，使用16进制颜色值
+            cursorwidth: "4px", // 滚动条的宽度，单位：便素
+            cursorborder: "0px solid #e0e0e0", // CSS方式定义滚动条边框
+            cursorborderradius: "3px", // 滚动条圆角（像素）
+            autohidemode: 'false', // 隐藏滚动条的方式, 可用的值: true | // 无滚动时隐藏 "cursor" | // 隐藏 false | // 不隐藏, "leave" | // 仅在指针离开内容时隐藏"hidden" | // 一直隐藏  "scroll", // 仅在滚动时显示
+            background: "#e0e0e0", // 轨道的背景颜色
+        });
+    });
+
+</script>
+</html>

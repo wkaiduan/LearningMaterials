@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3.1.MySQL 创建数据表</title>
+    <link type="text/css" rel="stylesheet" href="../css/common.css">
+    <link type="text/css" rel="stylesheet" href="../css/public.css">
+    <style>
+    </style>
+</head>
+<body>
+<div id="page-node-content">
+    <div class="content-tit clearfix">
+       <a href="简介.html" target="mainFrame" >首页</a>
+       &gt;
+       <a href="../mysql/MysqlcreateTable.html" target="mainFrame" >3.1.MySQL 创建数据表</a>
+    </div>
+    <div class="content-content clearfix">
+        <div class="living-example fl">
+                <h2>3.1.MySQL 创建数据表</h2>
+                <h3>创建MySQL数据表需要以下信息：</h3>
+                   <!--<pre>
+                    document.write("&lt;p&gt;This is a paragraph&lt;/p&gt;");
+                   </pre>-->
+                   
+
+
+                <p class="tip">表名</p>
+                <p class="tip">表字段名</p>
+                <p class="tip">定义每个表字段</p><br />
+                <h3>以下为创建MySQL数据表的SQL通用语法：</h3>
+                <pre>
+                    CREATE TABLE table_name (column_name column_type);
+                </pre>
+                <h3>以下例子中我们将在 ruance数据库中创建数据表student：</h3>
+                <pre>
+                    CREATE TABLE IF NOT EXISTS `student`( <br />
+   					`id` INT UNSIGNED AUTO_INCREMENT,<br />
+   					`name` VARCHAR(100) NOT NULL, <br />
+   					`sex` VARCHAR(40) NOT NULL, <br />
+   					`age` int( <br />
+					)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+                </pre>
+                <h3>实例解析：</h3>
+                <p class="tip">如果你不想字段为 NULL 可以设置字段的属性为 NOT NULL， 在操作数据库时如果输入该字段的数据为NULL ，就会报错。</p>
+                <p class="tip">AUTO_INCREMENT定义列为自增的属性，一般用于主键，数值会自动加1。</p>
+                <p class="tip">ENGINE 设置存储引擎，CHARSET 设置编码</p><hr />
+                <p class="tip">注：PRIMARY KEY关键字用于定义列为主键。 您可以使用多列来定义主键，列间以逗号分隔。</p>
+                
+              	<br />
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../js/jquery.min.js" ></script>
+<script type="text/javascript" src="../js/nicescrool.js"></script>
+<script type="text/javascript">
+    $(function(){
+
+        //美化滚动条
+        $(".result,.living-example").eq(0).niceScroll({
+            cursorcolor: "#bbb", // 改变滚动条颜色，使用16进制颜色值
+            cursorwidth: "4px", // 滚动条的宽度，单位：便素
+            cursorborder: "0px solid #e0e0e0", // CSS方式定义滚动条边框
+            cursorborderradius: "3px", // 滚动条圆角（像素）
+            autohidemode: 'false', // 隐藏滚动条的方式, 可用的值: true | // 无滚动时隐藏 "cursor" | // 隐藏 false | // 不隐藏, "leave" | // 仅在指针离开内容时隐藏"hidden" | // 一直隐藏  "scroll", // 仅在滚动时显示
+            background: "#e0e0e0", // 轨道的背景颜色
+        });
+    });
+
+</script>
+</html>
